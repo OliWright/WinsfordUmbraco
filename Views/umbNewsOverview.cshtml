@@ -1,7 +1,7 @@
 ﻿@inherits UmbracoTemplatePage
 @{
     Layout = "umbLayout.cshtml";
-
+// Testing
     // If the editor has not explicitly provided the "Page title" property page 
     // then just show the name of the page otherwise show the provided title
     var pageTitle = string.IsNullOrWhiteSpace(CurrentPage.Title)
@@ -59,10 +59,13 @@
                                     <li class="timestamp">@dateTime.ToString("f")</li>
                                 </ul>
 
-                                @if (string.IsNullOrWhiteSpace(item.Image) == false)
-                                {
-                                    <a href="@item.Url" class="image image-full"><img src="@item.Image" alt="" /></a>
-                                }
+								@{
+									if (item.HasValue("Image"))
+									{
+										var image = Umbraco.TypedMedia((int)item.Image);
+										<a href="@item.Url" class="image image-full"><noscript data-slimmage><img src="@image.GetCropUrl(270, 100)" alt="" /></noscript></a>
+									}
+								}                        
 
                                 @Umbraco.Truncate(item.BodyText, 200)
 

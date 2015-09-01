@@ -171,10 +171,15 @@
       margin: 0 0 2.5em 0;
     }
 
+	/* Bigger h2 for page content */
     .is-page-content h2
     {
       font-size: 3em;
-      margin: 0 0 0.5em 0;
+      /* padding: 0 1.5em 0 1.5em; */
+      /* margin: 0 0 0.5em 0; */
+		/* Try to align with side-bar */
+		/*top: -0.775em;*/
+	top: 3em; /* Why isn't this doing anything? */
     }
 
     .is-page-content .byline
@@ -238,25 +243,26 @@
   #header
   {
     text-align: center;
-    font-size: 2em;
+    font-size: 4em;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 6em 0 3em 0;
-    background: #fff;
+    padding: 2.5em 0 0 0;
+    /*background: #fff;*/
     margin: 0 auto;
   }
 
     #header .logo
     {
+		/* Horizontal line */
       position: relative;
       text-align: center;
-      border-top: solid 5px #e7eae8;
+      /* border-top: solid 5px #ff6600; */
     }
 
       #header .logo div
       {
-        background: #fff;
+        /*background: #fff;*/
         position: relative;
         display: inline-block;
         padding: 0 1.5em 0 1.5em;
@@ -266,8 +272,12 @@
       #header .logo h1,
       #header .logo .byline
       {
-        display: inline;
+         display: inline;
       }
+	#header .logo .byline
+	{
+		font-size: 30%;
+	 }
 
 /*********************************************************************************/
 /* Nav                                                                           */
@@ -325,7 +335,7 @@
         position: relative;
         display: block;
         text-decoration: none;
-        color: #6b7770;
+        color: #785E3E; /*#6b7770;*/
         top: -3px;
         padding: 3px 1.5em 0.25em 1.5em;
         border-bottom-left-radius: 6px;
@@ -345,7 +355,7 @@
 
         #nav li:hover a
         {
-          background: #C1CAC5;
+          background: #CBC3B3; /* #C1CAC5; */
           color: #fff;
         }
 
@@ -355,9 +365,45 @@
 
         #nav li.current_page_item a
         {
-          background: #e3daa8;
+          background: #ff6600;
           color: #fff;
         }
+
+/*********************************************************************************/
+/* Login                                                                         */
+/*********************************************************************************/
+
+#login
+{
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	z-index: 1002;
+	width: 20%;
+	//height: 3.5em;
+	//line-height: 1em;
+	text-align: right;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+}
+
+/* Make the logout button appear alongside the user name
+   rather than underneath it. */
+#login p,form,button
+{
+	display: inline;
+}
+
+/* The logout button */
+#login button
+{
+	color: #785E3E;
+	background-color:#ff6600;
+	border-radius: 6px;
+	border-style: none;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+}
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -391,12 +437,12 @@
 
   #main
   {
-    padding: 4em 0 4em 0;
+    padding: 2em 0 2em 0;
   }
 
     #main > .row
     {
-      padding: 3em 0 3em 0;
+      padding: 2em 0 2em 0;
     }
 
 /*********************************************************************************/

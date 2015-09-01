@@ -21,10 +21,15 @@
   {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    background: #f2f5f3;
-    color: #6b7770;
+    /* background: #FFF; */
+    color: #78736C;
     font-size: 11.5pt;
-    line-height: 2em;
+    line-height: 1em;
+	background: url(images/winsford_logo.svg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
   }
   
   h1, h2, h3, h4, h5, h6, h7
@@ -32,7 +37,7 @@
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    color: #6b7770;
+    color: #78736C;
   }
 
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h7 a
@@ -45,24 +50,24 @@
   h2.major
   {
     position: relative;
-    border-top: solid 5px #e7eae8;
+    border-bottom: solid 5px #ff6600;
   }
 
     h2.major span
     {
-      background: #fff;
+      /*background: #fff; */
       position: relative;
       display: inline-block;
     }
 
     #footer h2.major span
     {
-      background: #f2f5f3;
+      background: #F5EDD5;
     }
   
   a
   {
-    color: #006376;
+    color: #765300;
     text-decoration: underline;
   }
 
@@ -81,7 +86,12 @@
     clear: both;
   }
   
-  p, ul, ol, dl, table
+	p
+	{
+	    margin-bottom: 1em;
+	}
+		
+  ul, ol, dl, table
   {
     margin-bottom: 3em;
   }
@@ -110,7 +120,7 @@
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    color: #c1cac5;
+    color: #CAC8C2;
   }
 
   .image
@@ -134,7 +144,7 @@
       out the entire style.
     */
     
-    .image:before
+    /*.image:before
     {
       content: '';
       position: absolute;
@@ -145,7 +155,7 @@
       background: url('images/overlay.png');
       opacity: 0.2;
       border-radius: 8px;
-    }
+    }*/
 
   .image-full
   {
@@ -179,7 +189,7 @@
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    background: #e3daa8;
+    background: #ff6600;
     color: #fff;
     border-radius: 8px;
     outline: 0;
@@ -192,12 +202,12 @@
 
     .button:hover
     {
-      background: #ebe3b2;
+      background: #FFD98B;//#ebe3b2;
     }
   
     .button-alt
     {
-      background: #c1cac5;
+      background: #CAC8C2;
     }
 
       .button-alt:hover
@@ -221,7 +231,7 @@
   
     ul.style2 > li
     {
-      border-top: solid 2px #e7eae8;
+      border-top: solid 2px #ff6600;
       padding-top: 2.35em;
       margin-top: 2.35em;
     }
@@ -254,7 +264,7 @@
       {
         display: block;
         position: relative;
-        background: #c1cac5 url('images/icons-contact.png');
+        background: #CAC8C2 url('images/icons-contact.png');
         width: 48px;
         height: 48px;
         text-indent: -9999px;
@@ -323,7 +333,7 @@
       {
         display: block;
         position: relative;
-        background: #c1cac5;
+        background: #ff6600;
         width: 12em;
         height: 12em;
         border-radius: 6em;
@@ -495,9 +505,9 @@
   
   #main-wrapper
   {
-    background: #fff;
-    border-top: solid 5px #e3daa8;
-    border-bottom: solid 5px #c1cac5;
+    /*background: #fff;*/
+    border-top: solid 5px #ff6600;
+    border-bottom: solid 5px #ff6600;
   }
   
 /*********************************************************************************/
@@ -523,7 +533,7 @@
   #banner
   {
     position: relative;
-    background: rgba(21, 28, 23, 0.95);
+    background: rgba(28, 26, 21, 0.95);
     text-align: center;
     z-index: 2;
   }
@@ -565,14 +575,14 @@
     
     #banner .byline
     {
-      color: #575d59;
+      color: #5C5A57;//#575d59;
     }
 
     #banner .button
     {
-      color: #b4b7b5;
+      color: #B8B7B5;//#b4b7b5;
       background: transparent !important;
-      border: solid 4px rgba(87, 93, 89, 0.35);
+      border: solid 4px rgba(255,160,0,1);//rgba(87, 93, 89, 0.35);
       border-radius: 16px;
       -moz-transition: border-color .2s ease-in-out, color .2s ease-in-out;
       -webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
@@ -584,7 +594,7 @@
       #banner .button:hover
       {
         color: #e4e7e5;
-        border-color: rgba(87, 93, 89, 0.75);
+        border-color: rgba(255,213,139, 0.75);//rgba(87, 93, 89, 0.75);
       }
 
       #banner .button:active

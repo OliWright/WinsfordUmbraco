@@ -36,6 +36,8 @@
     var featuredNewsItemDateTime = featuredNewsItem.PublishDate == default(DateTime) 
         ? featuredNewsItem.CreateDate 
         : featuredNewsItem.PublishDate;
+	
+	string pageType = typeof(CurrentPage).FullName;
 }
 
 <!-- Blog -->
@@ -48,6 +50,7 @@
                     <!-- Featured Post -->
                     <article class="is-post">
                         <header>
+							<h1>@pageType</h1>
                             <h3><a href="@featuredNewsItem.Url">@featuredNewsItemTitle</a></h3>
                             <span class="byline">@featuredNewsItem.SubHeader</span>
                             <ul class="meta">

@@ -1,4 +1,5 @@
-﻿@inherits UmbracoTemplatePage
+﻿@using Umbraco.Web.Models
+@inherits UmbracoTemplatePage
 @{
     // Model.Content is the current page that we're on
     // AncestorsOrSelf is all of the ancestors this page has in the tree
@@ -8,7 +9,7 @@
 }
 <!-- Features -->
 <section class="is-features">
-    <h2 class="major"><span>Wonderful featured pages</span></h2>
+    <h2 class="major"><span>Featured Pages</span></h2>
     <div>
         <div class="row">
             @foreach (var feature in homePage.umbTextPages.Where("featuredPage"))
@@ -16,7 +17,17 @@
                 <div class="3u">
                     <!-- Feature -->
                     <section class="is-feature">
-                        <a href="@feature.Url" class="image image-full"><img src="@feature.Image" alt="" /></a>
+                        @{
+                            if (feature.HasValue("Image"))
+                            {
+                                var featureImage = Umbraco.TypedMedia((int)feature.Image);
+                                <a href="@feature.Url" class="image image-full">
+								<noscript data-slimmage>
+	                         	<img src="@featureImage.GetCropUrl( 270, 161 )" />
+								</noscript>									
+                                </a>
+                            }
+                        }                        
                         <h3><a href="@feature.Url">@feature.Name</a></h3>
                         @Umbraco.Truncate(feature.BodyText, 100)
                     </section>

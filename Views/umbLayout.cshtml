@@ -1,6 +1,15 @@
 ﻿@inherits UmbracoTemplatePage
+@using ClientDependency.Core.Mvc;
 @{
     Layout = null;
+	
+    @*Html.RequiresJs("/js/jquery.min.js");*@
+    Html.RequiresJs("/umbraco_client/ui/jquery.js");
+    Html.RequiresJs("/js/config.js");
+    Html.RequiresJs("/js/skel.min.js");
+    Html.RequiresJs("/js/skel-panels.min.js");
+    Html.RequiresJs("/scripts/slimmage.js");
+	
 }<!DOCTYPE html>
 <!--
     TXT 2.0 by HTML5 UP
@@ -14,10 +23,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:700" rel="stylesheet" />
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/config.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/skel-panels.min.js"></script>
+	@Html.Raw(@Html.RenderJsHere())
     <noscript>
         <link rel="stylesheet" href="/css/skel-noscript.css" />
         <link rel="stylesheet" href="/css/style.css" />
@@ -32,23 +38,21 @@
     <header id="header">
         <div class="logo">
             <div>
-                <h1><a href="/" id="logo">@Umbraco.Field("siteName", recursive: true)</a></h1>
-                <span class="byline">@Umbraco.Field("byline", recursive: true)</span>
+                <h1><a href="/" id="logo">@Umbraco.Field("siteName", recursive: true)</a></h1><br>
+                <p class="byline">@Umbraco.Field("byline", recursive: true)</p>
             </div>
         </div>
     </header>
     <!-- /Header -->
     @{ Html.RenderPartial("umbTopNavigation"); }
 
+	<!-- /Background Image -->
+	<!-- <div class="backgroundimage"></div> -->
+
     @RenderBody()
 
     <!-- Footer -->
     <footer id="footer" class="container">
-        <div class="row">
-            <div class="12u">
-                @{ Html.RenderPartial("umbAbout"); }
-            </div>
-        </div>
         <div class="row">
             <div class="12u">
                 @{ Html.RenderPartial("umbSocial"); }
@@ -57,7 +61,7 @@
         <div class="row">
             <!-- Copyright -->
             <div id="copyright">
-                &copy; @DateTime.Now.Year @Umbraco.Field("copyright", recursive: true) | Images: <a href="http://fotogrph.com">fotogrph</a> + <a href="http://iconify.it">Iconify.it</a> | Design: <a href="http://html5up.net/">HTML5 UP</a>
+                &copy; @DateTime.Now.Year @Umbraco.Field("copyright", recursive: true) | Design based on <a href="http://html5up.net/txt/">TXT</a> by <a href="http://n33.co/">h33</a> for <a href="http://html5up.net/">HTML5 UP</a>
             </div>
             <!-- /Copyright -->
         </div>

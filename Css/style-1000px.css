@@ -42,7 +42,7 @@
 	
 	#main-wrapper
 	{
-		border-top-width: 20px;
+		border-top-width: 10px;
 		border-bottom-width: 10px;
 	}
 
@@ -52,7 +52,8 @@
 
 	#header
 	{
-		padding: 5em 0 2em 0;
+	    padding: 2.5em 0 0 0;
+		//padding: 5em 0 2em 0;
 	}
 
 /*********************************************************************************/

@@ -19,10 +19,13 @@
                             <h2>@pageTitle</h2>
                         </header>
                         <section>
-                            @if (string.IsNullOrWhiteSpace(CurrentPage.Image) == false)
-                            {
-                                <span class="image image-full"><img src="@CurrentPage.Image" alt="" /></span>
-                            }
+							@{
+								if (CurrentPage.HasValue("Image"))
+								{
+									var image = Umbraco.TypedMedia((int)CurrentPage.Image);
+									<span class="image image-full"><noscript data-slimmage><img src="@image.GetCropUrl(400, 225)" alt="" /></noscript></span>
+								}
+							}                        
 
                             @CurrentPage.BodyText
                         </section>                           

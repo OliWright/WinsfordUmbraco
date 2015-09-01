@@ -1,0 +1,35 @@
+﻿@inherits UmbracoTemplatePage
+@{
+	var childPages = CurrentPage.Children();
+}
+<!-- Features -->
+<section class="is-features">
+    <h2 class="major"><span>Features</span></h2>
+    <div>
+        <div class="row">
+			@foreach (var feature in childPages.Where("featureInParent"))
+			{
+				<div class="3u">
+					<!-- Feature -->
+					<section class="is-feature">
+                        @{
+                            if (feature.HasValue("Image"))
+                            {
+                                var featureImage = Umbraco.TypedMedia((int)feature.Image);
+                                <a href="@feature.Url" class="image image-full">
+								<noscript data-slimmage>
+	                         	<img src="@featureImage.GetCropUrl( 270, 161 )" />
+								</noscript>									
+                                </a>
+                            }
+                        }                        
+						<h3><a href="@feature.Url">@feature.Name</a></h3>
+						@Umbraco.Truncate(feature.BodyText, 100)
+					</section>
+					<!-- /Feature -->
+				</div>
+			}
+        </div>
+    </div>
+</section>
+<!-- /Features -->

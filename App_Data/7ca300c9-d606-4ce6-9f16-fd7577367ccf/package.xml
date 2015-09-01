@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <info>
+    <package>
+      <name>Slimsy</name>
+      <version>1.1.5</version>
+      <license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+      <url>https://github.com/Jeavon/Slimsy</url>
+      <requirements>
+        <major>7</major>
+        <minor>1</minor>
+        <patch>3</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Jeavon Leopold, Marc Stöcker</name>
+      <website>http://our.umbraco.org</website>
+    </author>
+    <readme><![CDATA[Please follow the instructions on the project page http://our.umbraco.org/projects/website-utilities/slimsy]]></readme>
+  </info>
+
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+
+  <Actions>
+    <Action runat="install" undo="false" alias="Slimsy.AddAssemblyBinding" name="HtmlAgilityPack" publicKeyToken="bd319b19eaf3b43a" oldVersion="0.0.0.0-1.4.6.0" newVersion="1.4.6.0" />
+    <Action runat="install" undo="true" alias="Slimsy.AddHttpModule" name="SlimResponseModule" position="end" type="Imazen.SlimResponse.SlimResponseModule, Imazen.SlimResponse" />
+    <Action runat="install" undo="true" alias="Slimsy.AddNamespace" file="~/views/web.config" xpath="//configuration/system.web.webPages.razor/pages" position="end" namespace="Slimsy" />
+  </Actions>
+
+  <control />
+
+  <files><file><guid>171fd907-f2a4-46e9-9ecf-e34860952ed0.dll</guid><orgPath>/bin</orgPath><orgName>Imazen.SlimResponse.dll</orgName></file><file><guid>7f2c928b-1c02-471c-9ba1-4e8f7a09f3b6.dll</guid><orgPath>/bin</orgPath><orgName>Slimsy.dll</orgName></file><file><guid>196e5361-4ef1-44d5-9998-1584882e57fa.js</guid><orgPath>/Scripts</orgPath><orgName>slimmage.js</orgName></file><file><guid>1747fdf5-ae19-49c2-bb5b-9f9c42b3c5e0.js</guid><orgPath>/Scripts</orgPath><orgName>slimmage.min.js</orgName></file><file><guid>4eeabb26-5fba-4cbb-8a80-1780fdf9a442.js</guid><orgPath>/Scripts</orgPath><orgName>slimmage.settings.js</orgName></file><file><guid>e8e6293c-8aa3-41d2-908e-24833afb7d09.js</guid><orgPath>/Scripts</orgPath><orgName>slimmage.settings.min.js</orgName></file></files>
+
+</umbPackage>
