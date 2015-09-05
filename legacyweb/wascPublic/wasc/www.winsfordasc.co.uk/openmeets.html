@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.winsfordasc.co.uk/openmeets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:59:00 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Open Meets</title>
+<meta name="viewport" content="width = 1000, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="GENERATOR" content="Freeway Pro 7.0.1">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; background-image:url(Resources/backgroundgradien.gif); background-repeat:repeat-x; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+em { font-style:italic }
+h1 { font-size:18px }
+h1:first-child { margin-top:0px }
+strong { font-weight:bold }
+.topNav { color:#fff; font-family:Lucida Grande; font-size:12px; text-align:right }
+.style101 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px }
+.style4 { font-size:13px }
+.body { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:justify }
+.style18 { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:17px; text-align:left }
+.blue { color:#369 }
+.style127 { color:#c37f2c; font-size:14px }
+.style9 { font-size:14px }
+.style28 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; text-align:left }
+.style112 { font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:12px }
+.style110 { font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:12px; text-align:center }
+.style128 { text-align:center }
+.style117 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px }
+.style115 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px; text-align:center }
+.style108 { color:#000; font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:12px; line-height:17px; text-align:left }
+.style131 { color:#666; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; text-align:left }
+#PageDiv { position:relative; min-height:100%; max-width:1000px; margin:auto }
+#currentDateAction1 { overflow:visible }
+#PDFicon1a { left:19px; top:0px; width:40px; height:40px; vertical-align:middle; overflow:hidden }
+#PDFicon1b { left:19px; top:0px; width:40px; height:40px; vertical-align:middle; overflow:hidden }
+#PDFicon1c { left:19px; top:0px; width:40px; height:40px; vertical-align:middle; overflow:hidden }
+#PDFicon1c2 { left:19px; top:0px; width:40px; height:40px; vertical-align:middle; overflow:hidden }
+#PDFicon1c2a { left:19px; top:0px; width:40px; height:40px; vertical-align:middle; overflow:hidden }
+#PDFicon1c2a2 { left:19px; top:0px; width:40px; height:40px; vertical-align:middle; overflow:hidden }
+#item3 { overflow:visible }
+#item4 { overflow:visible }
+a.navHTML:link  { text-decoration: none; color:#FFFFFF }
+a.navHTML:visited  { text-decoration: none; color:#FFFFFF }
+a.navHTML:hover  { text-decoration: underline; color:#FF3300 }
+a.navHTML:active  { text-decoration: underline; color:#FF3300 }
+-->
+</style>
+<!--[if lt IE 7]>
+<link rel=stylesheet type="text/css" href="css/ie6.css">
+<style type="text/css">
+#PageDiv { height:100% }
+</style>
+<![endif]-->
+<script type="text/javascript">//<![CDATA[
+
+var fwCurDate = {
+	days: {en: ['Sunday, ','Monday, ','Tuesday, ','Wednesday, ','Thursday, ','Friday, ','Saturday, ']},
+	months: {en: ['January','February','March','April','May','June','July','August','September','October','November','December', '_dy__m_ _d_, _y_']}
+};
+
+function writeDate(settings)
+{
+	var d = new Date(),
+		str = fwCurDate.months[settings.lang][12];
+	str = str.replace(/_dy_/, (settings.day ? fwCurDate.days[settings.lang][d.getDay()] : ""))
+		 .replace(/_d_/, d.getDate())
+		 .replace(/_m_/, fwCurDate.months[settings.lang][d.getMonth()])
+		 .replace(/_y_/, d.getFullYear());
+	document.write(str);
+}
+
+
+function FWStripFileFromFilterString(filterString)
+{
+	var start,end;
+	var strSrc = "src='";
+	var strRes = "";
+
+	start = filterString.indexOf(strSrc);
+
+	if(start != -1)
+	{
+		start += strSrc.length;
+		
+		end = filterString.indexOf("',",start);
+		if(end != -1)
+		{
+			strRes = filterString.substring(start,end);
+		}
+	}
+
+	return strRes;
+}
+
+
+var fwIsNetscape = navigator.appName == 'Netscape';
+
+
+fwLoad = new Object;
+function FWLoad(image)
+{
+	if (!document.images)
+		return null;
+	if (!fwLoad[image])
+	{
+		fwLoad[image]=new Image;
+		fwLoad[image].src=image;
+	}
+	return fwLoad[image].src;
+}
+
+
+fwRestore = new Object;
+function FWRestore(msg,chain) 
+{
+	if (document.images) 
+		for (var i in fwRestore)
+		{
+			var r = fwRestore[i];
+			if (r && (!chain || r.chain==chain) && r.msg==msg)
+			{
+				r.src = FWLoad(r.old);
+				fwRestore[i]=null;
+			}
+		}
+}
+
+
+function FWLSwap(name,msg,newImg,layer,chain,trigger) 
+{
+	var r = fwRestore[name];
+	if (document.images && (!r || r.msg < msg)) 
+	{
+		var uselayers = fwIsNetscape && document.layers && layer != '';
+		var hld;
+		if (uselayers)
+			hld = document.layers[layer].document;
+		else
+			hld = document;
+		var im = hld.getElementById(name);
+		if (!im.old)
+		{
+			if(usingIEFix && im.runtimeStyle.filter)
+				im.old = FWStripFileFromFilterString(im.runtimeStyle.filter);
+			else
+				im.old = im.src;
+		}
+		
+		im.msg = msg;
+		im.chain = chain;
+		im.trigger = trigger;
+		if (newImg) im.src = FWLoad(newImg);
+		fwRestore[name] = im;
+	}
+}
+
+
+function FWCallHit(func,targNum,msg)
+{
+	if(func)
+		for (var i in func)
+			func[i](targNum,msg);
+}
+function FW_Hit(frameset,chain,targNum,msg)
+{
+	if (frameset && frameset.length) {
+		for (var i=0 ; i <frameset.length ; i++)
+		{
+			try {
+				FW_Hit(frameset[i].frames,chain,targNum,msg);
+			} catch(e) {}
+		}
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+	}
+	else
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+}
+
+
+fwHit = new Object;
+function FWSlave(frameset,chain,targNum,msg)
+{
+	if (msg==1) fwHit[chain]=targNum;
+	FW_Hit(frameset,chain,targNum,1);
+}
+
+function FWSRestore(frameset,chain)
+{
+	var hit=fwHit[chain];
+	if (hit)
+		FW_Hit(frameset,chain,hit,0);
+	fwHit[chain]=null;
+}
+
+function FWPreload()
+{
+	FWLoad("Resources/item2h.gif");
+	FWLoad("Resources/item2g.gif");
+	FWLoad("Resources/item2b8.gif");
+	FWLoad("Resources/item2b7.gif");
+}
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+var usingIEFix = false;
+//]]></script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">//<![CDATA[
+usingIEFix = true;
+//]]></script>
+<![endif]-->
+
+
+</head>
+<body onload="FWPreload()">
+<div id="PageDiv">
+	<table border=0 cellspacing=0 cellpadding=0 width=984>
+		<colgroup>
+			<col width=21>
+			<col width=454>
+			<col width=506>
+			<col width=2>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=14 colspan=4></td>
+			<td height=14></td>
+		</tr>
+		<tr valign=top>
+			<td height=206 rowspan=2></td>
+			<td height=177 colspan=3 valign=bottom><img src="Resources/meetstopimage.jpg" border=0 width=962 height=177 alt="meetstopimage" style="float:left"></td>
+			<td height=177></td>
+		</tr>
+		<tr valign=top>
+			<td height=29><img src="Resources/meetstopimage1.jpg" border=0 width=454 height=29 alt="meetstopimage" style="float:left"></td>
+			<td height=30 rowspan=2><p class="topNav f-fp f-lp"><span class="style101"><a href="index.html" class="navHTML">Home</a> | </span><span class="style4"><a href="swim.html" class="navHTML"><span class="style101">Swim</span></a><span class="style101"> | </span><a href="news.html" class="navHTML"><span class="style101">News</span></a><span class="style101"> | </span><a href="meetscal.html" class="navHTML"><span class="style101">Meets</span></a><span class="style101"> | </span><a href="information.html" class="navHTML"><span class="style101">Information</span></a><span class="style101"> | </span><a href="memberssectiona.html" class="navHTML"><span class="style101">Members</span></a></span></p>
+			</td>
+			<td height=30 rowspan=2></td>
+			<td height=29></td>
+		</tr>
+		<tr valign=top>
+			<td height=1 colspan=2></td>
+			<td height=1></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=21 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=454 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=506 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=2 height=1 alt="" style="float:left"></td>
+			<td height=23><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+	<table border=0 cellspacing=0 cellpadding=0 width=982>
+		<colgroup>
+			<col width=22>
+			<col width=149>
+			<col width=9>
+			<col width=800>
+			<col width=1>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=66 rowspan=4></td>
+			<td height=22><img src="Resources/navtitle1a.png" border=0 width=149 height=22 alt="navTitle" style="float:left"></td>
+			<td height=66 rowspan=4></td>
+			<td height=25 rowspan=2><img src="Resources/titlebarwhitef.png" border=0 width=800 height=25 alt="titleBarWhite" style="float:left"></td>
+			<td height=25 rowspan=2></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 rowspan=2><a href="meetscal.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img1',1,'Resources/item2g.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2h.gif" border=0 width=149 height=22 alt="item2" style="float:left" id="img1"></a></td>
+			<td height=3></td>
+		</tr>
+		<tr valign=top>
+			<td height=662 colspan=2 rowspan=3 bgcolor="#ffffff" style="border:solid #fff 1px; padding:5px"><p class="style18 f-fp"><span class="blue"><span class="style127"> </span></span><span id="currentDateAction1"><script type="text/javascript">//<![CDATA[
+				writeDate({day:true, lang:"en"});
+				//]]></script></span></p>
+			<p class="style28">Winsford Open Meet Information</p>
+			<p class="style28">Clubs can download meet information (programme) - Entry file - Accepted entries - Results</p>
+			
+			<table border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td width=173 height=36 valign=top bgcolor="#99ccff"><p class="f-fp f-lp"><span class="style112">Meet</span></p>
+					</td>
+					<td width=89 valign=top bgcolor="#99ccff"><p class="f-fp f-lp"><span class="style112">Date</span></p>
+					</td>
+					<td width=94 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Closing <br>date</p>
+					</td>
+					<td width=107 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Programme</p>
+					</td>
+					<td width=13 valign=top bgcolor="#99ccff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Entry file</p>
+					</td>
+					<td width=122 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Accepted<br>Entries</p>
+					</td>
+					<td width=78 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Results</p>
+					</td>
+				</tr>
+			</table>
+			
+			<table border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td width=173 height=50 valign=middle bgcolor="#cccccc"><p class="f-fp f-lp"><span class="style117">Summer Development<br>2010</span></p>
+					</td>
+					<td width=89 valign=middle bgcolor="#cccccc"><p class="f-fp f-lp"><span class="style117">26 June<br>2010</span></p>
+					</td>
+					<td width=94 valign=middle bgcolor="#cccccc"><p class="style115 f-fp f-lp">closed</p>
+					</td>
+					<td width=107 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=13 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=122 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=78 valign=middle bgcolor="#cccccc"><p class="style128 f-fp f-lp"><a href="Resources/Dev%20Meet%202010%20full%20results.pdf" target="_blank"><img id="PDFicon1a" src="Resources/pdficon1a.jpg" alt="PDFicon1a"></a></p>
+					</td>
+				</tr>
+			</table>
+			
+			<table border=0 cellspacing=0 cellpadding=0 bgcolor="#ffffff">
+				<tr>
+					<td width=173 height=50 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">Autumn Open 2010</span></p>
+					</td>
+					<td width=89 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">30/31 Oct<br>2010</span></p>
+					</td>
+					<td width=94 valign=middle bgcolor="#ffffff"><p class="style115 f-fp f-lp">closed</p>
+					</td>
+					<td width=107 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=13 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=122 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=78 valign=middle bgcolor="#ffffff"><p class="style128 f-fp f-lp"><a href="Resources/autumn%20open%20results%202010.pdf" target="_blank"><img id="PDFicon1b" src="Resources/pdficon1a.jpg" alt="PDFicon1b"></a></p>
+					</td>
+				</tr>
+			</table>
+			
+			<table border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td width=173 height=50 valign=middle bgcolor="#cccccc"><p class="f-fp f-lp"><span class="style117">2nd Summer <br>Development 2011</span></p>
+					</td>
+					<td width=89 valign=middle bgcolor="#cccccc"><p class="f-fp f-lp"><span class="style117">2 July 2011</span></p>
+					</td>
+					<td width=94 valign=middle bgcolor="#cccccc"><p class="style115 f-fp f-lp">closed</p>
+					</td>
+					<td width=107 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=13 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=122 valign=middle bgcolor="#cccccc"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=78 valign=middle bgcolor="#cccccc"><p class="style128 f-fp f-lp"><a href="Resources/dev%20meet%202011%20full%20results.pdf" target="_blank"><img id="PDFicon1c" src="Resources/pdficon1a.jpg" alt="PDFicon1c"></a></p>
+					</td>
+				</tr>
+			</table>
+			
+			<table border=0 cellspacing=0 cellpadding=0 bgcolor="#ffffff">
+				<tr>
+					<td width=173 height=56 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">3rd Summer <br>Development 2012</span></p>
+					</td>
+					<td width=89 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">7 July 2012</span></p>
+					</td>
+					<td width=94 valign=middle bgcolor="#ffffff"><p class="style115 f-fp f-lp">closed</p>
+					</td>
+					<td width=107 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=13 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=122 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=78 valign=middle bgcolor="#ffffff"><p class="style128 f-fp f-lp"><a href="Resources/summer%20meet%20full%20results%207-7-12.pdf" target="_blank"><img id="PDFicon1c2" src="Resources/pdficon1a.jpg" alt="PDFicon1c2"></a></p>
+					</td>
+				</tr>
+				<tr>
+					<td width=173 height=56 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">4th Summer <br>Development 2013 Lv3</span></p>
+					</td>
+					<td width=89 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">6 July 2013</span></p>
+					</td>
+					<td width=94 valign=middle bgcolor="#ffffff"><p class="style115 f-fp f-lp">closed </p>
+					</td>
+					<td width=107 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=13 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=122 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=78 valign=middle bgcolor="#ffffff"><p class="style128 f-fp f-lp"><a href="Resources/wasc%20meet%20full%20results%206-7-13.pdf" target="_blank"><img id="PDFicon1c2a" src="Resources/pdficon1a.jpg" alt="PDFicon1c2a"></a></p>
+					</td>
+				</tr>
+				<tr>
+					<td width=173 height=56 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">5th Summer <br>Development 2013 Lv3</span></p>
+					</td>
+					<td width=89 valign=middle bgcolor="#ffffff"><p class="f-fp f-lp"><span class="style117">5 July 2014</span></p>
+					</td>
+					<td width=94 valign=middle bgcolor="#ffffff"><p class="style115 f-fp f-lp">closed </p>
+					</td>
+					<td width=107 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=13 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=104 valign=middle bgcolor="#ffffff"><p class="style115 f-fp f-lp"><br>&nbsp;</p>
+					</td>
+					<td width=122 valign=middle bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=78 valign=middle bgcolor="#ffffff"><p class="style128 f-fp f-lp"><a href="Resources/dev%20meet%2014%20results.pdf" target="_blank"><img id="PDFicon1c2a2" src="Resources/pdficon1a.jpg" alt="PDFicon1c2a2"></a></p>
+					</td>
+				</tr>
+			</table>
+			<p class="style108">&nbsp;</p>
+			<hr>
+			<p class="style131">Withdrawal form - <span id="item3"><a href="Resources/Withdrawal%20Form.doc">Download</a></span></p>
+			<p class="style131">For help with electronic entries click below:</p>
+			<p class="style131 f-lp"><span id="item4"><a href="Resources/TM%20Lite%20Help%20Sheet.doc">TM Lite Help Sheet</a></span></p>
+			</td>
+			<td height=19></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="openmeets.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img2',1,'Resources/item2b7.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b8.gif" border=0 width=149 height=22 alt="item2b" style="float:left" id="img2"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=633 colspan=3></td>
+			<td height=633></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=22 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=149 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=9 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=800 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!-- Mirrored from www.winsfordasc.co.uk/openmeets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:59:36 GMT -->
+</html>

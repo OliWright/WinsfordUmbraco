@@ -1,0 +1,15 @@
+HTTrack3.48-19 launched on Sat, 05 Sep 2015 06:24:32 at http://www.winsfordasc.co.uk/index.html
+(httrack http://www.winsfordasc.co.uk/index.html -W -O wascPublic/wasc -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+06:24:34	Warning: 	Note: due to www.winsfordasc.co.uk remote robots.txt rules, links beginning with these path will be forbidden: /Results/, /PBs/, /Documents/, /Admin/, /Results.htm, /Results 06 07.htm, /PBs.htm, /Contacts.htm, /PBPassword.js, /ResPassword.js, /Mempassword.js, /Adpassword.js, /Admin.htm, /Members.htm (see in the options to disable this)
+06:25:44	Warning: 	unexpected incomplete type with 200 code at ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js
+06:25:44	Warning: 	file not stored in cache due to bogus state (incomplete type with OK (200), size 163313): ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js
+06:32:06	Error: 	"Not Found" (404) at link www.winsfordasc.co.uk/Fundraising_files/editdata.mso (from www.winsfordasc.co.uk/Fundraising.htm)
+
+HTTrack Website Copier/3.48-19 mirror complete in 7 minutes 34 seconds : 246 links scanned, 244 files written (6322087 bytes overall) [6385550 bytes received at 14065 bytes/sec]
+(1 errors, 3 warnings, 0 messages)

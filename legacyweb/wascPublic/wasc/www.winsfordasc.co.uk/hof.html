@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.winsfordasc.co.uk/hof.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:56:36 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>HOF</title>
+<meta name="viewport" content="width = 1000, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="GENERATOR" content="Freeway Pro 7.0.1">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; background-image:url(Resources/backgroundgradien.gif); background-repeat:repeat-x; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+em { font-style:italic }
+h1 { font-size:18px }
+h1:first-child { margin-top:0px }
+strong { font-weight:bold }
+.topNav { color:#fff; font-family:Lucida Grande; font-size:12px; text-align:right }
+.style101 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px }
+.style4 { font-size:13px }
+.body { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:justify }
+.style142 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; margin-left:0px; margin-right:0px; text-align:left }
+.style72 { color:#666 }
+.style61 { color:#000 }
+.style152 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px }
+.style151 { color:#666; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; margin-left:0px; margin-right:0px; text-align:left }
+#PageDiv { position:relative; min-height:100%; max-width:1000px; margin:auto }
+a.navHTML1a:link  { text-decoration: none; color:#FFFFFF }
+a.navHTML1a:visited  { text-decoration: none; color:#FFFFFF }
+a.navHTML1a:hover  { text-decoration: underline; color:#FF3300 }
+a.navHTML1a:active  { text-decoration: underline; color:#FF3300 }
+-->
+</style>
+<!--[if lt IE 7]>
+<link rel=stylesheet type="text/css" href="css/ie6.css">
+<style type="text/css">
+#PageDiv { height:100% }
+</style>
+<![endif]-->
+
+<script type="text/javascript">//<![CDATA[
+var usingIEFix = false;
+//]]></script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">//<![CDATA[
+usingIEFix = true;
+//]]></script>
+<![endif]-->
+
+
+<script type="text/javascript">//<![CDATA[
+
+function FWStripFileFromFilterString(filterString)
+{
+	var start,end;
+	var strSrc = "src='";
+	var strRes = "";
+
+	start = filterString.indexOf(strSrc);
+
+	if(start != -1)
+	{
+		start += strSrc.length;
+		
+		end = filterString.indexOf("',",start);
+		if(end != -1)
+		{
+			strRes = filterString.substring(start,end);
+		}
+	}
+
+	return strRes;
+}
+
+
+var fwIsNetscape = navigator.appName == 'Netscape';
+
+
+fwLoad = new Object;
+function FWLoad(image)
+{
+	if (!document.images)
+		return null;
+	if (!fwLoad[image])
+	{
+		fwLoad[image]=new Image;
+		fwLoad[image].src=image;
+	}
+	return fwLoad[image].src;
+}
+
+
+fwRestore = new Object;
+function FWRestore(msg,chain) 
+{
+	if (document.images) 
+		for (var i in fwRestore)
+		{
+			var r = fwRestore[i];
+			if (r && (!chain || r.chain==chain) && r.msg==msg)
+			{
+				r.src = FWLoad(r.old);
+				fwRestore[i]=null;
+			}
+		}
+}
+
+
+function FWLSwap(name,msg,newImg,layer,chain,trigger) 
+{
+	var r = fwRestore[name];
+	if (document.images && (!r || r.msg < msg)) 
+	{
+		var uselayers = fwIsNetscape && document.layers && layer != '';
+		var hld;
+		if (uselayers)
+			hld = document.layers[layer].document;
+		else
+			hld = document;
+		var im = hld.getElementById(name);
+		if (!im.old)
+		{
+			if(usingIEFix && im.runtimeStyle.filter)
+				im.old = FWStripFileFromFilterString(im.runtimeStyle.filter);
+			else
+				im.old = im.src;
+		}
+		
+		im.msg = msg;
+		im.chain = chain;
+		im.trigger = trigger;
+		if (newImg) im.src = FWLoad(newImg);
+		fwRestore[name] = im;
+	}
+}
+
+
+function FWCallHit(func,targNum,msg)
+{
+	if(func)
+		for (var i in func)
+			func[i](targNum,msg);
+}
+function FW_Hit(frameset,chain,targNum,msg)
+{
+	if (frameset && frameset.length) {
+		for (var i=0 ; i <frameset.length ; i++)
+		{
+			try {
+				FW_Hit(frameset[i].frames,chain,targNum,msg);
+			} catch(e) {}
+		}
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+	}
+	else
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+}
+
+
+fwHit = new Object;
+function FWSlave(frameset,chain,targNum,msg)
+{
+	if (msg==1) fwHit[chain]=targNum;
+	FW_Hit(frameset,chain,targNum,1);
+}
+
+function FWSRestore(frameset,chain)
+{
+	var hit=fwHit[chain];
+	if (hit)
+		FW_Hit(frameset,chain,hit,0);
+	fwHit[chain]=null;
+}
+
+function FWPreload()
+{
+	FWLoad("Resources/item2c1a.gif");
+	FWLoad("Resources/item2c1.gif");
+	FWLoad("Resources/item2b4aa.gif");
+	FWLoad("Resources/item2b4a.gif");
+	FWLoad("Resources/item2b1a1a.gif");
+	FWLoad("Resources/item2b1a1.gif");
+	FWLoad("Resources/item2b2a5a.gif");
+	FWLoad("Resources/item2b2a5.gif");
+	FWLoad("Resources/item2b2a1aa.gif");
+	FWLoad("Resources/item2b2a1a.gif");
+	FWLoad("Resources/item2b2a2aa.gif");
+	FWLoad("Resources/item2b2a2a.gif");
+	FWLoad("Resources/item2b2a3aa.gif");
+	FWLoad("Resources/item2b2a3a.gif");
+	FWLoad("Resources/item2b2a4ba.gif");
+	FWLoad("Resources/item2b2a4b.gif");
+	FWLoad("Resources/item2b2a4a1a.gif");
+	FWLoad("Resources/item2b2a4a1.gif");
+	FWLoad("Resources/item2b2a4a1ab.gif");
+	FWLoad("Resources/item2b2a4a1aa.gif");
+	FWLoad("Resources/item2b2a4a1a1c.gif");
+	FWLoad("Resources/item2b2a4a1a1b.gif");
+	FWLoad("Resources/item2b2a4a1ba.gif");
+	FWLoad("Resources/item2b2a4a1b.gif");
+}
+//]]></script></head>
+<body onload="FWPreload()">
+<div id="PageDiv">
+	<table border=0 cellspacing=0 cellpadding=0 width=984>
+		<colgroup>
+			<col width=21>
+			<col width=431>
+			<col width=529>
+			<col width=2>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=14 colspan=4></td>
+			<td height=14></td>
+		</tr>
+		<tr valign=top>
+			<td height=206 rowspan=3></td>
+			<td height=177 colspan=3 valign=bottom><img src="Resources/memberstopimage1.jpg" border=0 width=962 height=177 alt="memberstopimage1" style="float:left"></td>
+			<td height=177></td>
+		</tr>
+		<tr valign=top>
+			<td height=29 rowspan=2><img src="Resources/trainingtopimage1.jpg" border=0 width=431 height=29 alt="memberstopimage1" style="float:left"></td>
+			<td height=27><p class="topNav f-fp f-lp"><span class="style101"><a href="index.html" class="navHTML1a">Home</a> | </span><span class="style4"><a href="swim.html" class="navHTML1a"><span class="style101">Swim</span></a><span class="style101"> | </span><a href="news.html" class="navHTML1a"><span class="style101">News</span></a><span class="style101"> | </span><a href="meetscal.html" class="navHTML1a"><span class="style101">Meets</span></a><span class="style101"> | </span><a href="information.html" class="navHTML1a"><span class="style101">Information</span></a><span class="style101"> | </span><a href="memberssectiona.html" class="navHTML1a"><span class="style101">Members</span></a></span></p>
+			</td>
+			<td height=27></td>
+			<td height=27></td>
+		</tr>
+		<tr valign=top>
+			<td height=2 colspan=2></td>
+			<td height=2></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=21 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=431 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=529 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=2 height=1 alt="" style="float:left"></td>
+			<td height=24><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+	<table border=0 cellspacing=0 cellpadding=0 width=982>
+		<colgroup>
+			<col width=22>
+			<col width=1>
+			<col width=147>
+			<col width=1>
+			<col width=9>
+			<col width=800>
+			<col width=1>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=242 rowspan=12></td>
+			<td height=22 colspan=3><img src="Resources/navtitle1a.png" border=0 width=149 height=22 alt="navTitle1a" style="float:left"></td>
+			<td height=242 rowspan=12></td>
+			<td height=22><img src="Resources/titlebarwhite1aj.png" border=0 width=800 height=22 alt="titleBarWhite1a" style="float:left"></td>
+			<td height=22></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3 rowspan=2><a href="swimwins.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img1',1,'Resources/item2c1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2c1a.gif" border=0 width=149 height=22 alt="item2c1" style="float:left" id="img1"></a></td>
+			<td height=1022 colspan=2 rowspan=17 bgcolor="#ffffff" style="border:solid #fff 1px; padding:5px"><p class="style142 f-fp"><span class="style72">If you find anything not right, please email me <a href="mailto:&#119;&#105;&#110;&#115;&#102;&#111;&#114;&#100;&#97;&#115;&#99;&#64;&#115;&#107;&#121;&#46;&#99;&#111;&#109;">winsfordasc@sky.com</a> as the system does have its off days.<br><br><span class="style61">Click logo to find full list of Hall of Fame times.</span></span></p>
+			<p class="style142"><br>29 Nov 2013<br><span class="style72">Abbey Brown - 10u 100m Free 9yr record, 800m Free 1yr rec, 100m back 7yr rec, 200m back 1yr rec, 200m Breast 14yr rec<br>Olivia Capper - 12u 50m Free 7yr record<br>Alisha Hawkins - 12u 400m Free 7yr record, 800m Free 6yr rec, 100m Fly 7yr rec<br>Jay Cushen - 9u 200m Free 1yr record, 100IM 1yr rec, 10u 100m Free 1yr rec, 100m Back 1yr rec, <br>Ethan Wright - 10u 200m Free 1yr record, 400m Free 1yr rec, 100 IM 1yr rec, 200 IM 13yr rec<br>Ethan Jones - 11u 400m Free 3yr record, 1500m Free 2yr rec, 50m Back 3yr rec, 100m Back 1yr rec, 200m Back 1yr rec<br>Finn Armitt - 11u 100m Fly 3yr record, <br>Ashley Hogg - 14u 50m Back 8yr record, 200m Back 8yr rec, 400 IM 1yr rec, 1500m Free 1yr rec, 15u 200m Breast 1yr rec, 50m Fly 1yr rec, 100m fly 7yr rec, 200m fly 9yr rec, 400 IM 7yr rec<br>Oliver Rose - 15u 50m Breast 1yr record, 16u 50m fly 1yr rec</span></p>
+			<p class="style142">10 May 2013<br><span class="style72">Alisha Hawkins - 11U 200m Free 7 yr record, 100m Fly 5yr rec, 100m free 5 yr rec, 50m fly 1 yr rec,<br>Ethan Wright - 10U 200 free 13 yr record, 100m back 15 yr rec, 200m back 1 yr rec,<br>Ethan Jones - 10U 50 back 13 yr record, 11U 100m back 12 yr rec, 200m back 1 yr rec, <br>Finn Armitt - 10U 100m fly 13 yr record, 100 IM 13 yr rec<br>Will Deeming - 11U 200 back 2 yr record<br>Ashley Hogg - 14U 400m free 6 yr record, 1500m free 8 yr rec, 50 breast 1 yr rec, 50m Fly 1 yr rec, 100m fly 1 yr rec, 200m fly 1 yr rec, 200 IM 1 yr rec, 400 IM 7 yr rec, <br>Oliver Rose - 15U 100m breast 7 yr record, 200m breast 8 yr rec, 50m fly 2 yr rec, <br>Alex Law - 16U 50m fly 3 yr record, 100m fly 6 yr rec</span></p>
+			<p class="style142">31 Dec 2012<br><span class="style72">Ethan Wright - 9yr 25m Free 13yr record, 9yr 25m Back 15yr rec, 9yr 25m fly 13yr rec, 9yr 100 IM 1yr rec<br>Samuel James - 14U 50 Fly 2yr record, 14U 200 Fly 5yr rec</span></p>
+			<p class="style142"><span class="style152">4</span> <span class="style152">Nov</span> 2012<br><span class="style72">Alisha Hawkins - 11U 50m Fly 5yr record, 10U 200m Fly set record, 10U 200 IM  5 yr rec<br>Abbey Brown - 9yr 200m Back 1yr record, 9yr 200m Free 1yr rec,<br>Ethan Jones - 9yr 50m Back 13 yr record, 9yr 200 Back set record, 9yr 50m Fly 4yr rec, 9yr 200m Fly set record, 10U 200m Fly set record, 9yr 200m IM set record, 10U 400m IM set record, 10U 400m Free 12yr rec, 9yr 400 IM  set rec<br>Ethan Wright - 9yr 200m Breast stroke set rec, 9yr 200m Free 1yr rec, </span></p>
+			<p class="style142">25 June 2012<br><span class="style72">After a long awaited return, the Hall of Fame is back and updated. Here are some of the swimmers who have achieved times to make it and there has been some long serving HOF times that have been replaced.<br>Abbey O Brown - Alisha Hawkins - Amy Booth - Jess Gallimore - Charlotte Carter - Victoria Cunningham - Ethan Jones - Jamie Young - Ashley Hogg - Alex Mitchell - Sam James - Brandon Sharkey - Callum Chapple, Alex Law and Oliver Rose.</span></p>
+			<p class="style151 f-lp">Amy Booth - 14U 800m Free 4yr record<br>Abbey O Brown - 9U 25m Back 5yr record<br>Alisha Hawkins - 10U 100 Fly 6yr record - 9U 200m Free set record - 10U 200m Free 8 yr rec - 10U 50m Free 5yr record - <br>10U 200m Back 5yr rec - 10U 50m Fly 6yr rec - 10U 200m Fly set record - 10U 400m Free set rec - 10U 800m Free set record <br>Charlotte Carter - 16U 100 Fly 7yr record<br>Victoria Cunningham - 200 IM 7yr record<br>Ethan Jones - 9U 200m Free 13yr record - 9U 100m Breast 6yr record <br>Jamie Young - 11U 1500m Free set record<br>Ashley Hogg - 11U 50m Back 9yr record - 12U 200m Free 7yr rec - 12U 400m Free 6yr rec - 13U 400m Free 6yr rec - 13U 200m Breast 7yr rec - 13U 200m Fly 6yr rec - 13U 100 Fly 8yr rec - 13U 1500m Free 8yr rec<br>Brandon Sharkey - 12U 50m Fly 7yr record<br>Sam James - 12U 100m Back 9yr record - 13U 50m Back 8yr rec - 13U 50m Fly 7yr rec - 13U 200m IM 7yr rec - 14U 200m IM 7yr rec<br>Oliver Rose - 14U 50 Breast 6yr record - 14U 100m Breast 6yr record - 14U 200m 7yr record</p>
+			</td>
+			<td height=3></td>
+		</tr>
+		<tr valign=top>
+			<td height=19></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="clublessons.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img2',1,'Resources/item2b4a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b4aa.gif" border=0 width=149 height=22 alt="item2b4a" style="float:left" id="img2"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="transition.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img3',1,'Resources/item2b1a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b1a1a.gif" border=0 width=149 height=22 alt="item2b1a1" style="float:left" id="img3"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="development.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img4',1,'Resources/item2b2a5.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a5a.gif" border=0 width=149 height=22 alt="item2b2a5" style="float:left" id="img4"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="competition.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img5',1,'Resources/item2b2a1a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a1aa.gif" border=0 width=149 height=22 alt="item2b2a1a" style="float:left" id="img5"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="galaupdates.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img6',1,'Resources/item2b2a2a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a2aa.gif" border=0 width=149 height=22 alt="item2b2a2a" style="float:left" id="img6"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="clubresults.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img7',1,'Resources/item2b2a3a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a3aa.gif" border=0 width=149 height=22 alt="item2b2a3a" style="float:left" id="img7"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="arena.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img8',1,'Resources/item2b2a4b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4ba.gif" border=0 width=149 height=22 alt="item2b2a4b" style="float:left" id="img8"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="crusader.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img9',1,'Resources/item2b2a4a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1a.gif" border=0 width=149 height=22 alt="item2b2a4a1" style="float:left" id="img9"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="nationals.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img12',1,'Resources/item2b2a4a1b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1ba.gif" border=0 width=149 height=22 alt="item2b2a4a1b" style="float:left" id="img12"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=18 colspan=5></td>
+			<td height=18></td>
+		</tr>
+		<tr valign=top>
+			<td height=44 rowspan=2></td>
+			<td height=22 colspan=3><a href="pbtimes.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img10',1,'Resources/item2b2a4a1aa.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1ab.gif" border=0 width=149 height=22 alt="item2b2a4a1a" style="float:left" id="img10"></a></td>
+			<td height=44 rowspan=2></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="hof.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img11',1,'Resources/item2b2a4a1a1b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1a1c.gif" border=0 width=149 height=22 alt="item2b2a4a1a1" style="float:left" id="img11"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=5 colspan=5></td>
+			<td height=5></td>
+		</tr>
+		<tr valign=top>
+			<td height=87 colspan=2></td>
+			<td height=87><a href="Resources/hf%2003oct14.pdf" target="_blank"><img src="Resources/hofimage.jpg" border=0 width=147 height=87 alt="HOFimage" style="float:left"></a></td>
+			<td height=87 colspan=2></td>
+			<td height=87></td>
+		</tr>
+		<tr valign=top>
+			<td height=660 colspan=5></td>
+			<td height=660></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=22 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=147 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=9 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=800 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!-- Mirrored from www.winsfordasc.co.uk/hof.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:56:37 GMT -->
+</html>
