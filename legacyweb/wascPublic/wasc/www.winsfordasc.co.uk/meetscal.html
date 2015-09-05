@@ -1,0 +1,711 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.winsfordasc.co.uk/meetscal.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:42:47 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Meets Cal</title>
+<meta name="viewport" content="width = 1000, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="GENERATOR" content="Freeway Pro 7.0.1">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; background-image:url(Resources/backgroundgradien.gif); background-repeat:repeat-x; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+em { font-style:italic }
+h1 { font-size:18px }
+h1:first-child { margin-top:0px }
+strong { font-weight:bold }
+.topNav { color:#fff; font-family:Lucida Grande; font-size:12px; text-align:right }
+.style101 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px }
+.style4 { font-size:13px }
+.body { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:justify }
+.style18 { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:17px; text-align:left }
+.blue { color:#369 }
+.style127 { color:#c37f2c; font-size:14px }
+.style9 { font-size:14px }
+.style111 { color:#ffffbe; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; margin-right:37px; text-align:left }
+.style91 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px }
+.style72 { color:#666 }
+.style194 { color:#094ee5; text-decoration:underline }
+.style113 { color:#666 }
+.style109 { color:#666; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; margin-right:37px; text-align:left }
+.style112 { font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:12px }
+.style110 { font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:12px; text-align:center }
+.style117 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px }
+.style121 { color:#000; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px }
+.style157 { color:#000; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px; text-align:left }
+.style124 { color:#000; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px; text-align:center }
+.style243 { color:#00f; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px }
+.style245 { color:#00f; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px; text-align:left }
+.style246 { color:#00f; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px; text-align:center }
+#PageDiv { position:relative; min-height:100%; max-width:1000px; margin:auto }
+#currentDateAction1 { background-color:#00f; overflow:visible }
+#item3 { overflow:visible }
+a.navHTML:link  { text-decoration: none; color:#FFFFFF }
+a.navHTML:visited  { text-decoration: none; color:#FFFFFF }
+a.navHTML:hover  { text-decoration: underline; color:#FF3300 }
+a.navHTML:active  { text-decoration: underline; color:#FF3300 }
+-->
+</style>
+<!--[if lt IE 7]>
+<link rel=stylesheet type="text/css" href="css/ie6.css">
+<style type="text/css">
+#PageDiv { height:100% }
+</style>
+<![endif]-->
+<script type="text/javascript">//<![CDATA[
+
+var fwCurDate = {
+	days: {en: ['Sunday, ','Monday, ','Tuesday, ','Wednesday, ','Thursday, ','Friday, ','Saturday, ']},
+	months: {en: ['January','February','March','April','May','June','July','August','September','October','November','December', '_dy__m_ _d_, _y_']}
+};
+
+function writeDate(settings)
+{
+	var d = new Date(),
+		str = fwCurDate.months[settings.lang][12];
+	str = str.replace(/_dy_/, (settings.day ? fwCurDate.days[settings.lang][d.getDay()] : ""))
+		 .replace(/_d_/, d.getDate())
+		 .replace(/_m_/, fwCurDate.months[settings.lang][d.getMonth()])
+		 .replace(/_y_/, d.getFullYear());
+	document.write(str);
+}
+
+
+function FWStripFileFromFilterString(filterString)
+{
+	var start,end;
+	var strSrc = "src='";
+	var strRes = "";
+
+	start = filterString.indexOf(strSrc);
+
+	if(start != -1)
+	{
+		start += strSrc.length;
+		
+		end = filterString.indexOf("',",start);
+		if(end != -1)
+		{
+			strRes = filterString.substring(start,end);
+		}
+	}
+
+	return strRes;
+}
+
+
+var fwIsNetscape = navigator.appName == 'Netscape';
+
+
+fwLoad = new Object;
+function FWLoad(image)
+{
+	if (!document.images)
+		return null;
+	if (!fwLoad[image])
+	{
+		fwLoad[image]=new Image;
+		fwLoad[image].src=image;
+	}
+	return fwLoad[image].src;
+}
+
+
+fwRestore = new Object;
+function FWRestore(msg,chain) 
+{
+	if (document.images) 
+		for (var i in fwRestore)
+		{
+			var r = fwRestore[i];
+			if (r && (!chain || r.chain==chain) && r.msg==msg)
+			{
+				r.src = FWLoad(r.old);
+				fwRestore[i]=null;
+			}
+		}
+}
+
+
+function FWLSwap(name,msg,newImg,layer,chain,trigger) 
+{
+	var r = fwRestore[name];
+	if (document.images && (!r || r.msg < msg)) 
+	{
+		var uselayers = fwIsNetscape && document.layers && layer != '';
+		var hld;
+		if (uselayers)
+			hld = document.layers[layer].document;
+		else
+			hld = document;
+		var im = hld.getElementById(name);
+		if (!im.old)
+		{
+			if(usingIEFix && im.runtimeStyle.filter)
+				im.old = FWStripFileFromFilterString(im.runtimeStyle.filter);
+			else
+				im.old = im.src;
+		}
+		
+		im.msg = msg;
+		im.chain = chain;
+		im.trigger = trigger;
+		if (newImg) im.src = FWLoad(newImg);
+		fwRestore[name] = im;
+	}
+}
+
+
+function FWCallHit(func,targNum,msg)
+{
+	if(func)
+		for (var i in func)
+			func[i](targNum,msg);
+}
+function FW_Hit(frameset,chain,targNum,msg)
+{
+	if (frameset && frameset.length) {
+		for (var i=0 ; i <frameset.length ; i++)
+		{
+			try {
+				FW_Hit(frameset[i].frames,chain,targNum,msg);
+			} catch(e) {}
+		}
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+	}
+	else
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+}
+
+
+fwHit = new Object;
+function FWSlave(frameset,chain,targNum,msg)
+{
+	if (msg==1) fwHit[chain]=targNum;
+	FW_Hit(frameset,chain,targNum,1);
+}
+
+function FWSRestore(frameset,chain)
+{
+	var hit=fwHit[chain];
+	if (hit)
+		FW_Hit(frameset,chain,hit,0);
+	fwHit[chain]=null;
+}
+
+function FWPreload()
+{
+	FWLoad("Resources/item2e.gif");
+	FWLoad("Resources/item2d.gif");
+	FWLoad("Resources/item2be.gif");
+	FWLoad("Resources/item2bd.gif");
+}
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+var usingIEFix = false;
+//]]></script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">//<![CDATA[
+usingIEFix = true;
+//]]></script>
+<![endif]-->
+
+
+</head>
+<body onload="FWPreload()">
+<div id="PageDiv">
+	<table border=0 cellspacing=0 cellpadding=0 width=984>
+		<colgroup>
+			<col width=21>
+			<col width=454>
+			<col width=506>
+			<col width=2>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=14 colspan=4></td>
+			<td height=14></td>
+		</tr>
+		<tr valign=top>
+			<td height=206 rowspan=2></td>
+			<td height=177 colspan=3 valign=bottom><img src="Resources/meetstopimage.jpg" border=0 width=962 height=177 alt="meetstopimage" style="float:left"></td>
+			<td height=177></td>
+		</tr>
+		<tr valign=top>
+			<td height=29><img src="Resources/meetstopimage1.jpg" border=0 width=454 height=29 alt="meetstopimage" style="float:left"></td>
+			<td height=30 rowspan=2><p class="topNav f-fp f-lp"><span class="style101"><a href="index.html" class="navHTML">Home</a> | </span><span class="style4"><a href="swim.html" class="navHTML"><span class="style101">Swim</span></a><span class="style101"> | </span><a href="news.html" class="navHTML"><span class="style101">News</span></a><span class="style101"> | </span><a href="meetscal.html" class="navHTML"><span class="style101">Meets</span></a><span class="style101"> | </span><a href="information.html" class="navHTML"><span class="style101">Information</span></a><span class="style101"> | </span><a href="memberssectiona.html" class="navHTML"><span class="style101">Members</span></a></span></p>
+			</td>
+			<td height=30 rowspan=2></td>
+			<td height=29></td>
+		</tr>
+		<tr valign=top>
+			<td height=1 colspan=2></td>
+			<td height=1></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=21 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=454 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=506 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=2 height=1 alt="" style="float:left"></td>
+			<td height=23><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+	<table border=0 cellspacing=0 cellpadding=0 width=994>
+		<colgroup>
+			<col width=22>
+			<col width=149>
+			<col width=9>
+			<col width=800>
+			<col width=13>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=66 rowspan=4></td>
+			<td height=22><img src="Resources/navtitle1a.png" border=0 width=149 height=22 alt="navTitle" style="float:left"></td>
+			<td height=66 rowspan=4></td>
+			<td height=25 rowspan=2><img src="Resources/titlebarwhite5.png" border=0 width=800 height=25 alt="titleBarWhite" style="float:left"></td>
+			<td height=25 rowspan=2></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 rowspan=2><a href="meetscal.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img1',1,'Resources/item2d.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2e.gif" border=0 width=149 height=22 alt="item2" style="float:left" id="img1"></a></td>
+			<td height=3></td>
+		</tr>
+		<tr valign=top>
+			<td height=3180 colspan=2 rowspan=3 bgcolor="#ffffff" style="border:solid #fff 1px; padding:5px"><p class="style18 f-fp"><span class="blue"><span class="style127"> </span></span><span id="currentDateAction1"><script type="text/javascript">//<![CDATA[
+				writeDate({day:true, lang:"en"});
+				//]]></script></span></p>
+			<p class="style111"><span class="style91"><strong>Meets Calendar 2014/2015</strong></span><br><span class="style72">Please click <span id="item3"><a href="Resources/Open%20Meets.doc">HERE</a></span> to read important information before completing your form<br>Send level 1 &amp; 2 electronic meet entries/enquiries to </span><span class="style194"><a href="mailto:&#108;&#101;&#118;&#101;&#108;&#49;&#97;&#110;&#100;&#50;&#109;&#101;&#101;&#116;&#101;&#110;&#116;&#114;&#105;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">level1and2meetentries@gmail.com</a></span><span class="style72"> and</span> <a href="mailto:&#119;&#105;&#110;&#110;&#103;&#97;&#108;&#97;&#101;&#110;&#116;&#114;&#105;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">winngalaentries@gmail.com</a><a href="mailto:&#108;&#121;&#110;&#100;&#97;&#119;&#97;&#115;&#99;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"><br></a><br><span class="style72">Send level 3 &amp; 4 electronic meet entries/enquiries to </span><span class="style113"><a href="mailto:&#119;&#105;&#110;&#115;&#97;&#99;&#50;&#48;&#49;&#49;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">winsac2011@gmail.com</a></span><span class="style72"> and </span><a href="mailto:&#119;&#105;&#110;&#110;&#103;&#97;&#108;&#97;&#101;&#110;&#116;&#114;&#105;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">winngalaentries@gmail.com</a></p>
+			<p class="style109">Check <a href="memberssectiona.html">Gala updates</a> page (members section) for regular information about meets and to download your entry form.</p>
+			<p class="style109">Head Coach has indicated which swimming squads should be attending which meet.<br>Ju - Juggernaut / Pl - Platinum / Go - Gold / Si - Silver / Tr - Transition Squads</p>
+			<p class="style109">&nbsp;</p>
+			
+			<table border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td width=95 height=36 valign=top bgcolor="#99ccff"><p class="f-fp f-lp"><span class="style112">Date</span></p>
+					</td>
+					<td width=137 valign=top bgcolor="#99ccff"><p class="f-fp f-lp"><span class="style112">Event</span></p>
+					</td>
+					<td width=85 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Long/Short<br>Course</p>
+					</td>
+					<td width=55 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Level</p>
+					</td>
+					<td width=105 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Pool</p>
+					</td>
+					<td width=130 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Swimming <br>Squads</p>
+					</td>
+					<td width=71 valign=top bgcolor="#99ccff"><p class="style110 f-fp f-lp">Entry<br>Format</p>
+					</td>
+				</tr>
+			</table>
+			
+			<table border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td width=49 height=4 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#cc9933"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">June</span></strong></span></p>
+					</td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">6/7</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">NW Regional Champs</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">1</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Manchester</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">All Qualifiers</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">email</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">7</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">Cath Ankers<br>(first come)</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">SC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">3</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Wrexham</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">Pl / Go / Si<br>Squads</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">email</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style243">13</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style245 f-fp f-lp">50m Training</p>
+					</td>
+					<td width=85 valign=middle><p class="style246 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=middle><p class="style246 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style246 f-fp f-lp">Jugg Group B</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">21</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">NW Open Water</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">Open</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">2</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Salford Quays</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">All Qualifiers</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">self entry</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">20/21</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">Liverpool sprints</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">3</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">Ju / Pl / Go / Si<br>Squads</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">email</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style243">27</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style245 f-fp f-lp">50m Training</p>
+					</td>
+					<td width=85 valign=middle><p class="style246 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=middle><p class="style246 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style246 f-fp f-lp">Jugg Group A</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">27/28</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">Aqua Bears<br>(first come)</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">SC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">3</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Wigan</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">Ju / Pl / Go / Si<br>Squads</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">email</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=4 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">July</span></strong></span></p>
+					</td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">4</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">Winsford Dev Meet<br>CANCELLED</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">SC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">3</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Winsford</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">Pl / Go / Si<br>Squads</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style243">4</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style245 f-fp f-lp">50m Training</p>
+					</td>
+					<td width=85 valign=middle><p class="style246 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=middle><p class="style246 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style246 f-fp f-lp">??</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style243">11</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style245 f-fp f-lp">50m Training</p>
+					</td>
+					<td width=85 valign=middle><p class="style246 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=middle><p class="style246 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style246 f-fp f-lp">??</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">12</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">Richmond Dales Summer Madness</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">3</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Leeds</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">Go / Si / Ju<br>Squads</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">email</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style243">18</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style245 f-fp f-lp">50m Training</p>
+					</td>
+					<td width=85 valign=middle><p class="style246 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=middle><p class="style246 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style246 f-fp f-lp">??</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style243">25</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style245 f-fp f-lp">50m Training</p>
+					</td>
+					<td width=85 valign=middle><p class="style246 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=middle><p class="style246 f-fp f-lp">Liverpool</p>
+					</td>
+					<td width=130 valign=middle><p class="style246 f-fp f-lp">??</p>
+					</td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">28-2</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">British Summer Champs (Nationals)</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">1</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Ponds Forge<br>Sheffield</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">Top 24 in Britain</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">self entry</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=5 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">Aug</span></strong></span></p>
+					</td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">4-9</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">ASA Summer Champs</p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">LC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">1</p>
+					</td>
+					<td width=105 valign=middle><p class="style124 f-fp f-lp">Ponds Forge<br>Sheffield</p>
+					</td>
+					<td width=130 valign=middle><p class="style124 f-fp f-lp">next top 20 in <br>Britain</p>
+					</td>
+					<td width=71 valign=middle><p class="style124 f-fp f-lp">self entry</p>
+					</td>
+				</tr>
+				<tr>
+					<td width=49 height=4 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">Sept</span></strong></span></p>
+					</td>
+					<td width=46 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=4 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">Oct</span></strong></span></p>
+					</td>
+					<td width=46 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=4 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">Nov</span></strong></span></p>
+					</td>
+					<td width=46 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=4 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top bgcolor="#c37f2c"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=middle><p class="f-fp f-lp"><span class="style117"><strong><span class="style4">Dec</span></strong></span></p>
+					</td>
+					<td width=46 valign=middle><p class="f-fp f-lp"><span class="style121">17-20</span></p>
+					</td>
+					<td width=137 valign=middle><p class="style157 f-fp f-lp">ASA Winter Champs </p>
+					</td>
+					<td width=85 valign=middle><p class="style124 f-fp f-lp">SC</p>
+					</td>
+					<td width=55 valign=middle><p class="style124 f-fp f-lp">1</p>
+					</td>
+					<td width=105 valign=middle><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=middle><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=middle><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+				<tr>
+					<td width=49 height=61 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=46 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=137 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=85 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=55 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=105 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=130 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					<td width=71 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+				</tr>
+			</table>
+			</td>
+			<td height=19></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="openmeets.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img2',1,'Resources/item2bd.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2be.gif" border=0 width=149 height=22 alt="item2b" style="float:left" id="img2"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=3151 colspan=3></td>
+			<td height=3151></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=22 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=149 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=9 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=800 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=13 height=1 alt="" style="float:left"></td>
+			<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!-- Mirrored from www.winsfordasc.co.uk/meetscal.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:42:51 GMT -->
+</html>

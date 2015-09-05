@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.winsfordasc.co.uk/development.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:44:24 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Development</title>
+<meta name="viewport" content="width = 1000, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="GENERATOR" content="Freeway Pro 7.0.1">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; background-image:url(Resources/backgroundgradien.gif); background-repeat:repeat-x; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+em { font-style:italic }
+h1 { font-size:18px }
+h1:first-child { margin-top:0px }
+strong { font-weight:bold }
+.topNav { color:#fff; font-family:Lucida Grande; font-size:12px; text-align:right }
+.style101 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px }
+.style4 { font-size:13px }
+.body { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:justify }
+.style18 { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:17px; text-align:left }
+.blue { color:#369 }
+.style91 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px }
+.style45 { color:#666; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px }
+.style59 { color:#666; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; text-align:left }
+.style158 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px }
+.style162 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:14px; line-height:17px; text-indent:0px; text-align:left }
+.style72 { color:#666 }
+#PageDiv { position:relative; min-height:100%; max-width:1000px; margin:auto }
+#goldsquadcropweb { left:0px; top:78px; width:624px; height:160px; overflow:hidden }
+#Plantiumsquadcropweb { left:0px; top:255px; width:624px; height:245px; overflow:hidden }
+#item21 { overflow:visible }
+#item20 { overflow:visible }
+#item19 { overflow:visible }
+#item18 { overflow:visible }
+#item17 { overflow:visible }
+#item16 { overflow:visible }
+#item15 { overflow:visible }
+#item14 { overflow:visible }
+#item13 { overflow:visible }
+#item12 { overflow:visible }
+#item11 { overflow:visible }
+#item10 { overflow:visible }
+#item9 { overflow:visible }
+#item8 { overflow:visible }
+#item7 { overflow:visible }
+#item6 { overflow:visible }
+#item5 { overflow:visible }
+#item4a { overflow:visible }
+#item4 { overflow:visible }
+#item3a { overflow:visible }
+#item3 { overflow:visible }
+#item2 { overflow:visible }
+#item1 { overflow:visible }
+a.navHTML1a:link  { text-decoration: none; color:#FFFFFF }
+a.navHTML1a:visited  { text-decoration: none; color:#FFFFFF }
+a.navHTML1a:hover  { text-decoration: underline; color:#FF3300 }
+a.navHTML1a:active  { text-decoration: underline; color:#FF3300 }
+a.featuredHTML:link  { text-decoration: none; color:#666666 }
+a.featuredHTML:visited  { text-decoration: none; color:#336699 }
+a.featuredHTML:hover  { text-decoration: none; color:#FF3300 }
+a.featuredHTML:active  { text-decoration: none;  }
+-->
+</style>
+<!--[if lt IE 7]>
+<link rel=stylesheet type="text/css" href="css/ie6.css">
+<style type="text/css">
+#PageDiv { height:100% }
+</style>
+<![endif]-->
+
+<script type="text/javascript">//<![CDATA[
+var usingIEFix = false;
+//]]></script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">//<![CDATA[
+usingIEFix = true;
+//]]></script>
+<![endif]-->
+
+
+<script type="text/javascript">//<![CDATA[
+
+function FWStripFileFromFilterString(filterString)
+{
+	var start,end;
+	var strSrc = "src='";
+	var strRes = "";
+
+	start = filterString.indexOf(strSrc);
+
+	if(start != -1)
+	{
+		start += strSrc.length;
+		
+		end = filterString.indexOf("',",start);
+		if(end != -1)
+		{
+			strRes = filterString.substring(start,end);
+		}
+	}
+
+	return strRes;
+}
+
+
+var fwIsNetscape = navigator.appName == 'Netscape';
+
+
+fwLoad = new Object;
+function FWLoad(image)
+{
+	if (!document.images)
+		return null;
+	if (!fwLoad[image])
+	{
+		fwLoad[image]=new Image;
+		fwLoad[image].src=image;
+	}
+	return fwLoad[image].src;
+}
+
+
+fwRestore = new Object;
+function FWRestore(msg,chain) 
+{
+	if (document.images) 
+		for (var i in fwRestore)
+		{
+			var r = fwRestore[i];
+			if (r && (!chain || r.chain==chain) && r.msg==msg)
+			{
+				r.src = FWLoad(r.old);
+				fwRestore[i]=null;
+			}
+		}
+}
+
+
+function FWLSwap(name,msg,newImg,layer,chain,trigger) 
+{
+	var r = fwRestore[name];
+	if (document.images && (!r || r.msg < msg)) 
+	{
+		var uselayers = fwIsNetscape && document.layers && layer != '';
+		var hld;
+		if (uselayers)
+			hld = document.layers[layer].document;
+		else
+			hld = document;
+		var im = hld.getElementById(name);
+		if (!im.old)
+		{
+			if(usingIEFix && im.runtimeStyle.filter)
+				im.old = FWStripFileFromFilterString(im.runtimeStyle.filter);
+			else
+				im.old = im.src;
+		}
+		
+		im.msg = msg;
+		im.chain = chain;
+		im.trigger = trigger;
+		if (newImg) im.src = FWLoad(newImg);
+		fwRestore[name] = im;
+	}
+}
+
+
+function FWCallHit(func,targNum,msg)
+{
+	if(func)
+		for (var i in func)
+			func[i](targNum,msg);
+}
+function FW_Hit(frameset,chain,targNum,msg)
+{
+	if (frameset && frameset.length) {
+		for (var i=0 ; i <frameset.length ; i++)
+		{
+			try {
+				FW_Hit(frameset[i].frames,chain,targNum,msg);
+			} catch(e) {}
+		}
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+	}
+	else
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+}
+
+
+fwHit = new Object;
+function FWSlave(frameset,chain,targNum,msg)
+{
+	if (msg==1) fwHit[chain]=targNum;
+	FW_Hit(frameset,chain,targNum,1);
+}
+
+function FWSRestore(frameset,chain)
+{
+	var hit=fwHit[chain];
+	if (hit)
+		FW_Hit(frameset,chain,hit,0);
+	fwHit[chain]=null;
+}
+
+function FWPreload()
+{
+	FWLoad("Resources/item2c1a.gif");
+	FWLoad("Resources/item2c1.gif");
+	FWLoad("Resources/item2b4aa.gif");
+	FWLoad("Resources/item2b4a.gif");
+	FWLoad("Resources/item2b1a1a.gif");
+	FWLoad("Resources/item2b1a1.gif");
+	FWLoad("Resources/item2b2a5a.gif");
+	FWLoad("Resources/item2b2a5.gif");
+	FWLoad("Resources/item2b2a1aa.gif");
+	FWLoad("Resources/item2b2a1a.gif");
+	FWLoad("Resources/item2b2a2aa.gif");
+	FWLoad("Resources/item2b2a2a.gif");
+	FWLoad("Resources/item2b2a3aa.gif");
+	FWLoad("Resources/item2b2a3a.gif");
+	FWLoad("Resources/item2b2a4ba.gif");
+	FWLoad("Resources/item2b2a4b.gif");
+	FWLoad("Resources/item2b2a4a1a.gif");
+	FWLoad("Resources/item2b2a4a1.gif");
+	FWLoad("Resources/item2b2a4a1ab.gif");
+	FWLoad("Resources/item2b2a4a1aa.gif");
+	FWLoad("Resources/item2b2a4a1a1a.gif");
+	FWLoad("Resources/item2b2a4a1a1.gif");
+	FWLoad("Resources/item2b2a4a1ba.gif");
+	FWLoad("Resources/item2b2a4a1b.gif");
+}
+//]]></script></head>
+<body onload="FWPreload()">
+<div id="PageDiv">
+	<table border=0 cellspacing=0 cellpadding=0 width=984>
+		<colgroup>
+			<col width=21>
+			<col width=431>
+			<col width=529>
+			<col width=2>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=14 colspan=4></td>
+			<td height=14></td>
+		</tr>
+		<tr valign=top>
+			<td height=206 rowspan=3></td>
+			<td height=177 colspan=3 valign=bottom><img src="Resources/memberstopimage1.jpg" border=0 width=962 height=177 alt="memberstopimage1" style="float:left"></td>
+			<td height=177></td>
+		</tr>
+		<tr valign=top>
+			<td height=29 rowspan=2><img src="Resources/trainingtopimage1.jpg" border=0 width=431 height=29 alt="memberstopimage1" style="float:left"></td>
+			<td height=27><p class="topNav f-fp f-lp"><span class="style101"><a href="index.html" class="navHTML1a">Home</a> | </span><span class="style4"><a href="swim.html" class="navHTML1a"><span class="style101">Swim</span></a><span class="style101"> | </span><a href="news.html" class="navHTML1a"><span class="style101">News</span></a><span class="style101"> | </span><a href="meetscal.html" class="navHTML1a"><span class="style101">Meets</span></a><span class="style101"> | </span><a href="information.html" class="navHTML1a"><span class="style101">Information</span></a><span class="style101"> | </span><a href="memberssectiona.html" class="navHTML1a"><span class="style101">Members</span></a></span></p>
+			</td>
+			<td height=27></td>
+			<td height=27></td>
+		</tr>
+		<tr valign=top>
+			<td height=2 colspan=2></td>
+			<td height=2></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=21 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=431 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=529 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=2 height=1 alt="" style="float:left"></td>
+			<td height=24><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+	<table border=0 cellspacing=0 cellpadding=0 width=983>
+		<colgroup>
+			<col width=22>
+			<col width=1>
+			<col width=147>
+			<col width=1>
+			<col width=9>
+			<col width=640>
+			<col width=11>
+			<col width=1>
+			<col width=149>
+			<col width=1>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=242 rowspan=12></td>
+			<td height=22 colspan=3><img src="Resources/navtitle1a.png" border=0 width=149 height=22 alt="navTitle1a" style="float:left"></td>
+			<td height=242 rowspan=12></td>
+			<td height=22><img src="Resources/titlebarwhite1a4.png" border=0 width=640 height=22 alt="titleBarWhite1a" style="float:left"></td>
+			<td height=22 colspan=2></td>
+			<td height=22 colspan=2><img src="Resources/featured.png" border=0 width=150 height=22 alt="featured" style="float:left"></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3 rowspan=2><a href="swimwins.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img1',1,'Resources/item2c1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2c1a.gif" border=0 width=149 height=22 alt="item2c1" style="float:left" id="img1"></a></td>
+			<td height=2190 rowspan=18 bgcolor="#ffffff" style="border:solid #fff 1px; padding:5px"><p class="style18 f-fp"><span class="blue"><span class="style91">Find all relevant information related to the Development Squad here, please revisit regularly to keep up to date.</span></span></p>
+			<p class="style59">&nbsp;</p>
+			<p class="style59"><span class="blue"><span class="style91"><span class="blue"><span class="style91"><span class="blue"><span class="style158"><span class="blue"><span class="style91"><span class="blue"><span class="style91"><span class="blue"><span class="style45"><img id="goldsquadcropweb" src="Resources/goldsquadcropweb.jpg" alt="goldsquadcropweb"></span></span></span></span></span></span></span></span></span></span></span></span></p>
+			<p class="style59"><span class="blue"><span class="style91"><span class="blue"><span class="style91"><span class="blue"><span class="style158"><span class="blue"><span class="style91"><span class="blue"><span class="style91"><span class="blue"><span class="style45"><img id="Plantiumsquadcropweb" src="Resources/plantiumsquadcro.jpg" alt="Plantiumsquadcropweb"></span></span></span></span></span></span></span></span></span></span></span></span></p>
+			<p class="style162"><span class="blue"><span class="style91">Club Desk<br><span class="style72">We urgently need parents to volunteer and help out with our club desk. We could really do with a volunteer to come forward to cover </span></span><span class="style45">Wednesday nights, alone or with another parent.</span></span></p>
+			<p class="style162 f-lp"><span class="blue"><span class="style45"><br>&nbsp;</span></span></p>
+			</td>
+			<td height=637 rowspan=17></td>
+			<td height=615 colspan=2 rowspan=17 bgcolor="#ffffff" style="border:solid #76829d 1px; padding:10px 3px"><p class="style18 f-fp f-lp"><br><span class="blue"><span class="style91">Dan's Newsletters<br><span class="style72"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><br><span id="item21"><a href="Resources/201402newsletter.pdf" target="_blank" class="featuredHTML">February 2014</a></span><br><span id="item20"><a href="Resources/201401newsletter.pdf" target="_blank" class="featuredHTML">January 2014</a></span><br></span></span></span></span></span></span></span></span></span></span></span></span><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item19"><a href="Resources/201312newsletter.pdf" target="_blank" class="featuredHTML">December 2013</a></span><br><span id="item18"><a href="Resources/201311Newsletter.pdf" target="_blank" class="featuredHTML">November 2013</a></span><br><span id="item17"><a href="Resources/201310Newsletter.pdf" target="_blank" class="featuredHTML">October 2013</a></span><br><span id="item16"><a href="Resources/201309Newsletter.pdf" target="_blank" class="featuredHTML">September 2013</a></span><br><br><span id="item15"><a href="Resources/201207Newsletter.pdf" target="_blank" class="featuredHTML">July </a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item14"><a href="Resources/201306newsletter.pdf" target="_blank" class="featuredHTML">June </a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item13"><a href="Resources/201305newsletter.pdf" target="_blank" class="featuredHTML">May </a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item12"><a href="Resources/201304newsletter.pdf" target="_blank" class="featuredHTML">April </a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item11"><a href="Resources/201303newsletter.pdf" target="_blank" class="featuredHTML">March </a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item10"><a href="Resources/201302newsletter.pdf" target="_blank" class="featuredHTML">Feb </a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item9"><a href="Resources/201301newsletter.pdf" target="_blank" class="featuredHTML">January 2013</a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item8"><a href="Resources/201212newsletter.pdf" target="_blank" class="featuredHTML">December</a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item7"><a href="Resources/201211newsletter.pdf" target="_blank" class="featuredHTML">November</a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item6"><a href="Resources/201210newsletter.pdf" target="_blank" class="featuredHTML">October</a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item5"><a href="Resources/201209Newsletter.pdf" target="_blank" class="featuredHTML">September 2012</a></span><br><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item4a"><a href="Resources/201207Newsletter.pdf" target="_blank" class="featuredHTML">July</a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item4"><a href="Resources/201206.pdf" target="_blank" class="featuredHTML">June</a></span><br><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span class="blue"><span class="style45"><span id="item3a"><a href="Resources/201205Newsletter.docx" class="featuredHTML">May</a></span><br><span class="blue"><span class="style45"><span id="item3"><a href="Resources/201204Newsletter.docx" class="featuredHTML">April</a></span><br><span class="blue"><span class="style45"><span id="item2"><a href="Resources/201203Newsletter.docx" class="featuredHTML">March</a></span><br><span class="blue"><span class="style45"><span id="item1"><a href="Resources/201201Newsletter.docx" class="featuredHTML">January 2012</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+			</td>
+			<td height=637 rowspan=17></td>
+			<td height=3></td>
+		</tr>
+		<tr valign=top>
+			<td height=19></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="clublessons.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img2',1,'Resources/item2b4a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b4aa.gif" border=0 width=149 height=22 alt="item2b4a" style="float:left" id="img2"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="transition.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img3',1,'Resources/item2b1a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b1a1a.gif" border=0 width=149 height=22 alt="item2b1a1" style="float:left" id="img3"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="development.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img4',1,'Resources/item2b2a5.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a5a.gif" border=0 width=149 height=22 alt="item2b2a5" style="float:left" id="img4"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="competition.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img5',1,'Resources/item2b2a1a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a1aa.gif" border=0 width=149 height=22 alt="item2b2a1a" style="float:left" id="img5"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="galaupdates.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img6',1,'Resources/item2b2a2a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a2aa.gif" border=0 width=149 height=22 alt="item2b2a2a" style="float:left" id="img6"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="clubresults.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img7',1,'Resources/item2b2a3a.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a3aa.gif" border=0 width=149 height=22 alt="item2b2a3a" style="float:left" id="img7"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="arena.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img8',1,'Resources/item2b2a4b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4ba.gif" border=0 width=149 height=22 alt="item2b2a4b" style="float:left" id="img8"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="crusader.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img9',1,'Resources/item2b2a4a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1a.gif" border=0 width=149 height=22 alt="item2b2a4a1" style="float:left" id="img9"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="nationals.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img12',1,'Resources/item2b2a4a1b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1ba.gif" border=0 width=149 height=22 alt="item2b2a4a1b" style="float:left" id="img12"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=18 colspan=5></td>
+			<td height=18></td>
+		</tr>
+		<tr valign=top>
+			<td height=44 rowspan=2></td>
+			<td height=22 colspan=3><a href="pbtimes.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img10',1,'Resources/item2b2a4a1aa.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1ab.gif" border=0 width=149 height=22 alt="item2b2a4a1a" style="float:left" id="img10"></a></td>
+			<td height=44 rowspan=2></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 colspan=3><a href="hof.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img11',1,'Resources/item2b2a4a1a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a4a1a1a.gif" border=0 width=149 height=22 alt="item2b2a4a1a1" style="float:left" id="img11"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=5 colspan=5></td>
+			<td height=5></td>
+		</tr>
+		<tr valign=top>
+			<td height=87 colspan=2></td>
+			<td height=87><a href="Resources/hf%2003oct14.pdf" target="_blank"><img src="Resources/hofimage.jpg" border=0 width=147 height=87 alt="HOFimage" style="float:left"></a></td>
+			<td height=87 colspan=2></td>
+			<td height=87></td>
+		</tr>
+		<tr valign=top>
+			<td height=1828 colspan=5 rowspan=2></td>
+			<td height=263></td>
+		</tr>
+		<tr valign=top>
+			<td height=1565 colspan=4></td>
+			<td height=1565></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=22 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=147 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=9 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=640 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=11 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=149 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!-- Mirrored from www.winsfordasc.co.uk/development.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:45:31 GMT -->
+</html>

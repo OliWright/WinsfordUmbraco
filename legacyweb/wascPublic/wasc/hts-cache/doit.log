@@ -1,0 +1,8 @@
+http://www.winsfordasc.co.uk/index.html -W -O wascPublic/wasc -%v
+File generated automatically on Sat, 05 Sep 2015 06:24:32, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

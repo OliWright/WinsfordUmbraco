@@ -1,0 +1,662 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.winsfordasc.co.uk/swim.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:42:22 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Swim</title>
+<meta name="viewport" content="width = 1000, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="GENERATOR" content="Freeway Pro 7.0.1">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; background-image:url(Resources/backgroundgradien.gif); background-repeat:repeat-x; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+em { font-style:italic }
+h1 { font-size:18px }
+h1:first-child { margin-top:0px }
+strong { font-weight:bold }
+.topNav { color:#fff; font-family:Lucida Grande; font-size:12px; text-align:right }
+.style101 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px }
+.style4 { font-size:13px }
+.body { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:justify }
+.style18 { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:17px; text-align:left }
+.blue { color:#369 }
+.style9 { font-size:14px }
+.style29 { color:#000; font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:14px; text-align:center; margin-top:5px }
+.style54 { font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:center; margin-top:5px }
+.style37 { font-family:Arial,Helvetica,sans-serif; font-size:14px; text-align:center; margin-top:5px }
+.style53 { font-family:Arial,Helvetica,sans-serif; font-size:12px }
+.style1 { font-size:12px }
+.style38 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:18px; text-align:center; margin-top:5px }
+.style42 { color:#000; font-size:14px }
+#PageDiv { position:relative; min-height:100%; max-width:1000px; margin:auto }
+a.navHTML:link  { text-decoration: none; color:#FFFFFF }
+a.navHTML:visited  { text-decoration: none; color:#FFFFFF }
+a.navHTML:hover  { text-decoration: underline; color:#FF3300 }
+a.navHTML:active  { text-decoration: underline; color:#FF3300 }
+-->
+</style>
+<!--[if lt IE 7]>
+<link rel=stylesheet type="text/css" href="css/ie6.css">
+<style type="text/css">
+#PageDiv { height:100% }
+</style>
+<![endif]-->
+
+<script type="text/javascript">//<![CDATA[
+var usingIEFix = false;
+//]]></script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">//<![CDATA[
+usingIEFix = true;
+//]]></script>
+<![endif]-->
+
+
+<script type="text/javascript">//<![CDATA[
+
+function FWStripFileFromFilterString(filterString)
+{
+	var start,end;
+	var strSrc = "src='";
+	var strRes = "";
+
+	start = filterString.indexOf(strSrc);
+
+	if(start != -1)
+	{
+		start += strSrc.length;
+		
+		end = filterString.indexOf("',",start);
+		if(end != -1)
+		{
+			strRes = filterString.substring(start,end);
+		}
+	}
+
+	return strRes;
+}
+
+
+var fwIsNetscape = navigator.appName == 'Netscape';
+
+
+fwLoad = new Object;
+function FWLoad(image)
+{
+	if (!document.images)
+		return null;
+	if (!fwLoad[image])
+	{
+		fwLoad[image]=new Image;
+		fwLoad[image].src=image;
+	}
+	return fwLoad[image].src;
+}
+
+
+fwRestore = new Object;
+function FWRestore(msg,chain) 
+{
+	if (document.images) 
+		for (var i in fwRestore)
+		{
+			var r = fwRestore[i];
+			if (r && (!chain || r.chain==chain) && r.msg==msg)
+			{
+				r.src = FWLoad(r.old);
+				fwRestore[i]=null;
+			}
+		}
+}
+
+
+function FWLSwap(name,msg,newImg,layer,chain,trigger) 
+{
+	var r = fwRestore[name];
+	if (document.images && (!r || r.msg < msg)) 
+	{
+		var uselayers = fwIsNetscape && document.layers && layer != '';
+		var hld;
+		if (uselayers)
+			hld = document.layers[layer].document;
+		else
+			hld = document;
+		var im = hld.getElementById(name);
+		if (!im.old)
+		{
+			if(usingIEFix && im.runtimeStyle.filter)
+				im.old = FWStripFileFromFilterString(im.runtimeStyle.filter);
+			else
+				im.old = im.src;
+		}
+		
+		im.msg = msg;
+		im.chain = chain;
+		im.trigger = trigger;
+		if (newImg) im.src = FWLoad(newImg);
+		fwRestore[name] = im;
+	}
+}
+
+
+function FWCallHit(func,targNum,msg)
+{
+	if(func)
+		for (var i in func)
+			func[i](targNum,msg);
+}
+function FW_Hit(frameset,chain,targNum,msg)
+{
+	if (frameset && frameset.length) {
+		for (var i=0 ; i <frameset.length ; i++)
+		{
+			try {
+				FW_Hit(frameset[i].frames,chain,targNum,msg);
+			} catch(e) {}
+		}
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+	}
+	else
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+}
+
+
+fwHit = new Object;
+function FWSlave(frameset,chain,targNum,msg)
+{
+	if (msg==1) fwHit[chain]=targNum;
+	FW_Hit(frameset,chain,targNum,1);
+}
+
+function FWSRestore(frameset,chain)
+{
+	var hit=fwHit[chain];
+	if (hit)
+		FW_Hit(frameset,chain,hit,0);
+	fwHit[chain]=null;
+}
+
+function FWPreload()
+{
+	FWLoad("Resources/item2bc.gif");
+	FWLoad("Resources/item2bb.gif");
+	FWLoad("Resources/item2b1c.gif");
+	FWLoad("Resources/item2b1b.gif");
+	FWLoad("Resources/item2b2c.gif");
+	FWLoad("Resources/item2b2b.gif");
+	FWLoad("Resources/item2b3c.gif");
+	FWLoad("Resources/item2b3b.gif");
+	FWLoad("Resources/item2c3.gif");
+	FWLoad("Resources/item2c2.gif");
+}
+//]]></script></head>
+<body onload="FWPreload()">
+<div id="PageDiv">
+	<table border=0 cellspacing=0 cellpadding=0 width=984>
+		<colgroup>
+			<col width=21>
+			<col width=431>
+			<col width=529>
+			<col width=2>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=14 colspan=4></td>
+			<td height=14></td>
+		</tr>
+		<tr valign=top>
+			<td height=206 rowspan=3></td>
+			<td height=177 colspan=3 valign=bottom><img src="Resources/trainingtopimage.jpg" border=0 width=962 height=177 alt="trainingtopimage" style="float:left"></td>
+			<td height=177></td>
+		</tr>
+		<tr valign=top>
+			<td height=29 rowspan=2><img src="Resources/trainingtopimage1.jpg" border=0 width=431 height=29 alt="trainingtopimage" style="float:left"></td>
+			<td height=27><p class="topNav f-fp f-lp"><span class="style101"><a href="index.html" class="navHTML">Home</a> | </span><span class="style4"><a href="swim.html" class="navHTML"><span class="style101">Swim</span></a><span class="style101"> | </span><a href="news.html" class="navHTML"><span class="style101">News</span></a><span class="style101"> | </span><a href="meetscal.html" class="navHTML"><span class="style101">Meets</span></a><span class="style101"> | </span><a href="information.html" class="navHTML"><span class="style101">Information</span></a><span class="style101"> | </span><a href="memberssectiona.html" class="navHTML"><span class="style101">Members</span></a></span></p>
+			</td>
+			<td height=27></td>
+			<td height=27></td>
+		</tr>
+		<tr valign=top>
+			<td height=2 colspan=2></td>
+			<td height=2></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=21 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=431 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=529 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=2 height=1 alt="" style="float:left"></td>
+			<td height=24><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+	<table border=0 cellspacing=0 cellpadding=0 width=982>
+		<colgroup>
+			<col width=22>
+			<col width=149>
+			<col width=9>
+			<col width=800>
+			<col width=1>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=132 rowspan=7></td>
+			<td height=22><img src="Resources/navtitle1a.png" border=0 width=149 height=22 alt="navTitle" style="float:left"></td>
+			<td height=132 rowspan=7></td>
+			<td height=25 rowspan=2><img src="Resources/titlebarwhitea.png" border=0 width=800 height=25 alt="titleBarWhite" style="float:left"></td>
+			<td height=25 rowspan=2></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 rowspan=2><a href="swim.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img5',1,'Resources/item2c2.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2c3.gif" border=0 width=149 height=22 alt="item2c" style="float:left" id="img5"></a></td>
+			<td height=3></td>
+		</tr>
+		<tr valign=top>
+			<td height=1413 colspan=2 rowspan=6 bgcolor="#ffffff" style="border:solid #fff 1px; padding:5px">
+				<table border=0 cellspacing=0 cellpadding=0 width=789>
+					<colgroup>
+						<col width=5>
+						<col width=1>
+						<col width=1>
+						<col width=1>
+						<col width=772>
+						<col width=1>
+						<col width=1>
+						<col width=1>
+						<col width=5>
+						<col width=1>
+					</colgroup>
+					<tr valign=top>
+						<td height=15 colspan=9 bgcolor="#ffffff"><p class="style18 f-fp f-lp"><span class="blue"><span class="style9"> </span></span></p>
+						</td>
+						<td height=15></td>
+					</tr>
+					<tr valign=top>
+						<td height=133 colspan=3 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=133 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=112 height=27 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Monday</p>
+								</td>
+								<td width=108 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Tuesday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Wednesday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Thursday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Friday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Saturday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Sunday</p>
+								</td>
+							</tr>
+							<tr>
+								<td width=765 height=27 colspan=7 valign=top bgcolor="#999999"><p class="style29 f-lp">Juggernaut Squad</p>
+								</td>
+							</tr>
+							<tr>
+								<td width=112 height=69 valign=top><p class="style54 f-lp">5.00 - 7.00 am</p>
+								</td>
+								<td width=108 valign=top><p class="style54">5.00 - 7.00 am</p>
+								<p class="style54 f-lp">6.00 - 7.00 pm<br>(Land Training)<br>7.00 - 8.30 pm</p>
+								</td>
+								<td width=109 valign=top><p class="style54">5.00 - 7.00 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>7.00 - </span><span class="style53">9.00</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54">5.00 - 7.00 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br></span><span class="style53">8.00 - 9.15</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style37 f-lp"><span class="style53">6</span><span class="style1">.00 - </span><span class="style53">8</span><span class="style1">.00 am</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54 f-lp"><br><br>5.00-7.00pm<br><br>7.00-8.00pm Gym</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=133 colspan=2 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=133></td>
+					</tr>
+					<tr valign=top>
+						<td height=6 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=6></td>
+					</tr>
+					<tr valign=top>
+						<td height=106 colspan=2 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=106 colspan=5>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=766 height=27 colspan=7 valign=top bgcolor="#cccccc"><p class="style38 f-lp"><strong><span class="style42">Platinum Squad</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=69 valign=top><p class="style54 f-lp">5.00 - 7.00 am</p>
+								</td>
+								<td width=109 valign=top><p class="style54">5.00 - <span class="style53">6</span>.<span class="style53">3</span>0 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54">5.00 - 7.00 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>6.00 - </span><span class="style53">7.00</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54">&nbsp;</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br></span><span class="style53">8.00 - 9.15</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54">&nbsp;</p>
+								<p class="style54 f-lp"><br><br>6.00 - 7.30 pm</p>
+								</td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">7</span>.00-<span class="style53">8</span>.00pm</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=106 colspan=2 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=106></td>
+					</tr>
+					<tr valign=top>
+						<td height=8 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=8></td>
+					</tr>
+					<tr valign=top>
+						<td height=103 colspan=3 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=103 colspan=5>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=766 height=24 colspan=7 valign=top bgcolor="#cc9933"><p class="style38 f-lp"><strong><span class="style42">  Gold Squad</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=69 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54">5.00 - <span class="style53">6</span>.<span class="style53">3</span>0 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54">&nbsp;</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>6.00 - </span><span class="style53">7.00</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54">&nbsp;</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br></span><span class="style53">7.00 - 8.00</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style37"><span class="style53">6</span><span class="style1">.00 - </span><span class="style53">8</span><span class="style1">.00 am</span></p>
+								<p class="style54 f-lp"><br><br>6.00 - 7.30 pm</p>
+								</td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">7</span>.00-<span class="style53">8</span>.00pm</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=103 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=103></td>
+					</tr>
+					<tr valign=top>
+						<td height=8 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=8></td>
+					</tr>
+					<tr valign=top>
+						<td height=106 colspan=3 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=106 colspan=5>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=766 height=27 colspan=7 valign=top bgcolor="#cccccc"><p class="style38 f-lp"><strong><span class="style42">  Silver Squad</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=69 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54">5.00 - <span class="style53">6</span>.<span class="style53">3</span>0 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54 f-lp"><span class="style53"><br><br><br></span><span class="style1"><br>6.00 - </span><span class="style53">7.00</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54">&nbsp;</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br></span><span class="style53">7.00 - 8.00</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><p class="style54 f-lp"><br><br><br><br>6.00 - 7.30 pm</p>
+								</td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">7</span>.00-<span class="style53">8</span>.00pm</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=106 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=106></td>
+					</tr>
+					<tr valign=top>
+						<td height=10 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=10></td>
+					</tr>
+					<tr valign=top>
+						<td height=114 colspan=4 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=765 height=27 colspan=7 valign=top bgcolor="#9966ff"><p class="style38 f-lp"><strong><span class="style42">Transition Squad A</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=77 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=108 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">5</span>.00 - <span class="style53">6</span>.00 pm</p>
+								</td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">1.30</span> - <span class="style53">3.00</span> pm  SJD</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=114 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114></td>
+					</tr>
+					<tr valign=top>
+						<td height=10 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=10></td>
+					</tr>
+					<tr valign=top>
+						<td height=114 colspan=4 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=765 height=27 colspan=7 valign=top bgcolor="#00ffff"><p class="style38 f-lp"><strong><span class="style42">Transition Squad B</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=77 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=108 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">5</span>.00 - <span class="style53">6</span>.00 pm</p>
+								</td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">12.30</span> -1<span class="style53">.30</span> pm  SJD</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=114 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114></td>
+					</tr>
+					<tr valign=top>
+						<td height=10 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=10></td>
+					</tr>
+					<tr valign=top>
+						<td height=114 colspan=3 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=765 height=27 colspan=7 valign=top bgcolor="#00ff00"><p class="style38 f-lp"><strong><span class="style42">Transition Squad C</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=77 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=108 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">12.30</span> -1<span class="style53">.30</span> pm  SJD</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=114 colspan=2 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114></td>
+					</tr>
+					<tr valign=top>
+						<td height=5 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=5></td>
+					</tr>
+					<tr valign=top>
+						<td height=37 colspan=2 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=37 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=112 height=27 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Monday</p>
+								</td>
+								<td width=108 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Tuesday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Wednesday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Thursday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Friday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Saturday</p>
+								</td>
+								<td width=109 valign=top bgcolor="#99ccff"><p class="style37 f-lp">Sunday</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=37 colspan=3 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=37></td>
+					</tr>
+					<tr valign=top>
+						<td height=2 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=2></td>
+					</tr>
+					<tr valign=top>
+						<td height=114 colspan=2 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=765 height=27 colspan=7 valign=top bgcolor="#ff6600"><p class="style38 f-lp"><strong><span class="style42">Training Squad (Youth)</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=77 valign=top><p class="style54 f-lp">5.00 - 7.00 am</p>
+								</td>
+								<td width=108 valign=top><p class="style54 f-lp">5.00 - 7.00 am</p>
+								</td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54">&nbsp;</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br></span><span class="style53">8.00 - 9.15</span><span class="style1"> pm</span></p>
+								</td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br>&nbsp;</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=114 colspan=3 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114></td>
+					</tr>
+					<tr valign=top>
+						<td height=4 colspan=9 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=4></td>
+					</tr>
+					<tr valign=top>
+						<td height=114 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114 colspan=4>
+						<table border=5 cellspacing=0 cellpadding=0>
+							<tr>
+								<td width=765 height=27 colspan=7 valign=top bgcolor="#ff6600"><p class="style38 f-lp"><strong><span class="style42">Training Squad (Junioir)</span></strong></p>
+								</td>
+							</tr>
+							<tr>
+								<td width=106 height=77 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=108 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54">5.<span class="style53">3</span>0 - <span class="style53">6</span>.<span class="style53">3</span>0 am</p>
+								<p class="style37 f-lp"><span class="style53"><br></span><span class="style1"><br>&nbsp;</span></p>
+								</td>
+								<td width=109 valign=top><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+								<td width=109 valign=top><p class="style54 f-lp"><br><br><br><br><span class="style53">5</span>.00 - <span class="style53">6</span>.00 pm</p>
+								</td>
+								<td width=115 valign=top><p class="style54 f-lp"><br><br>&nbsp;</p>
+								</td>
+							</tr>
+						</table>
+						</td>
+						<td height=114 colspan=4 bgcolor="#ffffff"><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td height=114></td>
+					</tr>
+					<tr valign=top>
+						<td height=279 colspan=9 bgcolor="#ffffff">&nbsp;</td>
+						<td height=279></td>
+					</tr>
+					<tr class="f-sp">
+						<td><img src="Resources/_clear.gif" border=0 width=5 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=772 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+						<td><img src="Resources/_clear.gif" border=0 width=5 height=1 alt="" style="float:left"></td>
+						<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+					</tr>
+				</table>
+			</td>
+			<td height=19></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="lessonsa.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img1',1,'Resources/item2bb.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2bc.gif" border=0 width=149 height=22 alt="item2b" style="float:left" id="img1"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="shop.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img2',1,'Resources/item2b1b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b1c.gif" border=0 width=149 height=22 alt="item2b1" style="float:left" id="img2"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="linksa.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img3',1,'Resources/item2b2b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2c.gif" border=0 width=149 height=22 alt="item2b2" style="float:left" id="img3"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="http://winsfordasc.co.uk/Resources.htm" target="_blank" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img4',1,'Resources/item2b3b.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b3c.gif" border=0 width=149 height=22 alt="item2b3" style="float:left" id="img4"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=1318 colspan=3></td>
+			<td height=1318></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=22 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=149 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=9 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=800 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!-- Mirrored from www.winsfordasc.co.uk/swim.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:42:34 GMT -->
+</html>

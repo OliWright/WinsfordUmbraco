@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.winsfordasc.co.uk/information.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:42:52 GMT -->
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Information</title>
+<meta name="viewport" content="width = 1000, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="GENERATOR" content="Freeway Pro 7.0.1">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; background-image:url(Resources/backgroundgradien.gif); background-repeat:repeat-x; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+em { font-style:italic }
+h1 { font-size:18px }
+h1:first-child { margin-top:0px }
+strong { font-weight:bold }
+.topNav { color:#fff; font-family:Lucida Grande; font-size:12px; text-align:right }
+.style101 { font-family:Verdana,Arial,Helvetica,sans-serif; font-size:14px }
+.style4 { font-size:13px }
+.body { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; text-align:justify }
+.style18 { color:#666; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:17px; text-align:left }
+.blue { color:#369 }
+.style127 { color:#c37f2c; font-size:14px }
+.style9 { font-size:14px }
+.style34 { color:#000; font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:13px; line-height:17px; text-align:left }
+.style39 { color:#000; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:17px; text-align:left }
+.style32 { font-family:Trebuchet MS,Arial,Helvetica,sans-serif; font-size:13px }
+#PageDiv { position:relative; min-height:100%; max-width:1000px; margin:auto }
+#currentDateAction1 { overflow:visible }
+a.navHTML:link  { text-decoration: none; color:#FFFFFF }
+a.navHTML:visited  { text-decoration: none; color:#FFFFFF }
+a.navHTML:hover  { text-decoration: underline; color:#FF3300 }
+a.navHTML:active  { text-decoration: underline; color:#FF3300 }
+-->
+</style>
+<!--[if lt IE 7]>
+<link rel=stylesheet type="text/css" href="css/ie6.css">
+<style type="text/css">
+#PageDiv { height:100% }
+</style>
+<![endif]-->
+<script type="text/javascript">//<![CDATA[
+
+var fwCurDate = {
+	days: {en: ['Sunday, ','Monday, ','Tuesday, ','Wednesday, ','Thursday, ','Friday, ','Saturday, ']},
+	months: {en: ['January','February','March','April','May','June','July','August','September','October','November','December', '_dy__m_ _d_, _y_']}
+};
+
+function writeDate(settings)
+{
+	var d = new Date(),
+		str = fwCurDate.months[settings.lang][12];
+	str = str.replace(/_dy_/, (settings.day ? fwCurDate.days[settings.lang][d.getDay()] : ""))
+		 .replace(/_d_/, d.getDate())
+		 .replace(/_m_/, fwCurDate.months[settings.lang][d.getMonth()])
+		 .replace(/_y_/, d.getFullYear());
+	document.write(str);
+}
+
+
+function FWStripFileFromFilterString(filterString)
+{
+	var start,end;
+	var strSrc = "src='";
+	var strRes = "";
+
+	start = filterString.indexOf(strSrc);
+
+	if(start != -1)
+	{
+		start += strSrc.length;
+		
+		end = filterString.indexOf("',",start);
+		if(end != -1)
+		{
+			strRes = filterString.substring(start,end);
+		}
+	}
+
+	return strRes;
+}
+
+
+var fwIsNetscape = navigator.appName == 'Netscape';
+
+
+fwLoad = new Object;
+function FWLoad(image)
+{
+	if (!document.images)
+		return null;
+	if (!fwLoad[image])
+	{
+		fwLoad[image]=new Image;
+		fwLoad[image].src=image;
+	}
+	return fwLoad[image].src;
+}
+
+
+fwRestore = new Object;
+function FWRestore(msg,chain) 
+{
+	if (document.images) 
+		for (var i in fwRestore)
+		{
+			var r = fwRestore[i];
+			if (r && (!chain || r.chain==chain) && r.msg==msg)
+			{
+				r.src = FWLoad(r.old);
+				fwRestore[i]=null;
+			}
+		}
+}
+
+
+function FWLSwap(name,msg,newImg,layer,chain,trigger) 
+{
+	var r = fwRestore[name];
+	if (document.images && (!r || r.msg < msg)) 
+	{
+		var uselayers = fwIsNetscape && document.layers && layer != '';
+		var hld;
+		if (uselayers)
+			hld = document.layers[layer].document;
+		else
+			hld = document;
+		var im = hld.getElementById(name);
+		if (!im.old)
+		{
+			if(usingIEFix && im.runtimeStyle.filter)
+				im.old = FWStripFileFromFilterString(im.runtimeStyle.filter);
+			else
+				im.old = im.src;
+		}
+		
+		im.msg = msg;
+		im.chain = chain;
+		im.trigger = trigger;
+		if (newImg) im.src = FWLoad(newImg);
+		fwRestore[name] = im;
+	}
+}
+
+
+function FWCallHit(func,targNum,msg)
+{
+	if(func)
+		for (var i in func)
+			func[i](targNum,msg);
+}
+function FW_Hit(frameset,chain,targNum,msg)
+{
+	if (frameset && frameset.length) {
+		for (var i=0 ; i <frameset.length ; i++)
+		{
+			try {
+				FW_Hit(frameset[i].frames,chain,targNum,msg);
+			} catch(e) {}
+		}
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+	}
+	else
+		FWCallHit(frameset.window["FT_"+chain],targNum,msg);
+}
+
+
+fwHit = new Object;
+function FWSlave(frameset,chain,targNum,msg)
+{
+	if (msg==1) fwHit[chain]=targNum;
+	FW_Hit(frameset,chain,targNum,1);
+}
+
+function FWSRestore(frameset,chain)
+{
+	var hit=fwHit[chain];
+	if (hit)
+		FW_Hit(frameset,chain,hit,0);
+	fwHit[chain]=null;
+}
+
+function FWPreload()
+{
+	FWLoad("Resources/item2c5.gif");
+	FWLoad("Resources/item2c4.gif");
+	FWLoad("Resources/item2b4h.gif");
+	FWLoad("Resources/item2b4g.gif");
+	FWLoad("Resources/item2b1a3.gif");
+	FWLoad("Resources/item2b1a2.gif");
+	FWLoad("Resources/item2b2a2.gif");
+	FWLoad("Resources/item2b2a1.gif");
+	FWLoad("Resources/item2b3a2.gif");
+	FWLoad("Resources/item2b3a1.gif");
+}
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+var usingIEFix = false;
+//]]></script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">//<![CDATA[
+usingIEFix = true;
+//]]></script>
+<![endif]-->
+
+
+</head>
+<body onload="FWPreload()">
+<div id="PageDiv">
+	<table border=0 cellspacing=0 cellpadding=0 width=984>
+		<colgroup>
+			<col width=21>
+			<col width=65>
+			<col width=389>
+			<col width=45>
+			<col width=461>
+			<col width=2>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=14 colspan=6></td>
+			<td height=14></td>
+		</tr>
+		<tr valign=top>
+			<td height=206 rowspan=4></td>
+			<td height=6 colspan=5 valign=bottom><img src="Resources/infotopimage.jpg" border=0 width=962 height=6 alt="infotopimage" style="float:left"></td>
+			<td height=6></td>
+		</tr>
+		<tr valign=top>
+			<td height=119 valign=middle><img src="Resources/infotopimage1.jpg" border=0 width=65 height=119 alt="infotopimage" style="float:left"></td>
+			<td height=119 colspan=2><img src="Resources/item6a.gif" border=0 width=434 height=119 alt="INFO" style="float:left"></td>
+			<td height=119 colspan=2 valign=middle><img src="Resources/infotopimage2.jpg" border=0 width=463 height=119 alt="infotopimage" style="float:left"></td>
+			<td height=119></td>
+		</tr>
+		<tr valign=top>
+			<td height=52 colspan=5 valign=middle><img src="Resources/infotopimage3.jpg" border=0 width=962 height=52 alt="infotopimage" style="float:left"></td>
+			<td height=52></td>
+		</tr>
+		<tr valign=top>
+			<td height=29 colspan=2><img src="Resources/meetstopimage1.jpg" border=0 width=454 height=29 alt="infotopimage" style="float:left"></td>
+			<td height=30 colspan=2 rowspan=2><p class="topNav f-fp f-lp"><span class="style101"><a href="index.html" class="navHTML">Home</a> | </span><span class="style4"><a href="swim.html" class="navHTML"><span class="style101">Swim</span></a><span class="style101"> | </span><a href="news.html" class="navHTML"><span class="style101">News</span></a><span class="style101"> | </span><a href="meetscal.html" class="navHTML"><span class="style101">Meets</span></a><span class="style101"> | </span><a href="information.html" class="navHTML"><span class="style101">Information</span></a><span class="style101"> | </span><a href="memberssectiona.html" class="navHTML"><span class="style101">Members</span></a></span></p>
+			</td>
+			<td height=30 rowspan=2></td>
+			<td height=29></td>
+		</tr>
+		<tr valign=top>
+			<td height=1 colspan=3></td>
+			<td height=1></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=21 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=65 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=389 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=45 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=461 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=2 height=1 alt="" style="float:left"></td>
+			<td height=23><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+	<table border=0 cellspacing=0 cellpadding=0 width=982>
+		<colgroup>
+			<col width=22>
+			<col width=149>
+			<col width=9>
+			<col width=800>
+			<col width=1>
+			<col width=1>
+		</colgroup>
+		<tr valign=top>
+			<td height=132 rowspan=7></td>
+			<td height=22><img src="Resources/navtitle1a.png" border=0 width=149 height=22 alt="navTitle" style="float:left"></td>
+			<td height=132 rowspan=7></td>
+			<td height=25 rowspan=2><img src="Resources/titlebarwhitec.png" border=0 width=800 height=25 alt="titleBarWhite" style="float:left"></td>
+			<td height=25 rowspan=2></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22 rowspan=2><a href="information.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img1',1,'Resources/item2c4.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2c5.gif" border=0 width=149 height=22 alt="item2c" style="float:left" id="img1"></a></td>
+			<td height=3></td>
+		</tr>
+		<tr valign=top>
+			<td height=848 colspan=2 rowspan=6 bgcolor="#ffffff" style="border:solid #fff 1px; padding:5px"><p class="style18 f-fp"><span class="blue"><span class="style127"> </span></span><span id="currentDateAction1"><script type="text/javascript">//<![CDATA[
+				writeDate({day:true, lang:"en"});
+				//]]></script></span></p>
+			<p class="style34">We consider Winsford ASC to be one of the best swimming clubs in the area. Very few clubs of our size are fortunate enough to have an experienced National Coach such as Dave Pettengell, who helps to ensure our swimmers receive the highest standard of coaching. Dave is ably supported by level 3 coach Dan Goodwin.</p>
+			<p class="style34">The club offers 16 and a half hours of pool time, long course training once a month plus land training for our higher squads. We have a six lane deck level pool with a state of the art electronic timing system and have been awarded the Sports England Clubmark and the Swim 21 Silver Award for Competitive Development status.</p>
+			<p class="style34">We aim to be a friendly, inclusive club which caters for all swimmers from the complete beginner to national level competitors. We operate lessons and squad systems, with a transition squad to bridge the gap between the two. Advancement through the various levels is determined by the teaching and coaching teams through continuous assessments and termly promotions.</p>
+			<p class="style34">The club regularly produces County Champions and qualifiers for both Regional and National championships.</p>
+			<p class="style34">We compete in two leagues - the Crusader and Arena – and use these to offer swimmers of differing abilities competitive opportunities at an appropriate level. We also encourage swimmers to enter open meets in which the club participates. Club Championships are held once a year and time trials at regular intervals to allow swimmers’ progress to be closely monitored.</p>
+			<p class="style39"><span class="style32">The club is run by volunteers and, like most swimming clubs, relies heavily on parental support. If you would like to help in any way please contact the club secretary on </span><a href="mailto:&#119;&#105;&#110;&#115;&#102;&#111;&#114;&#100;&#97;&#115;&#99;&#64;&#115;&#107;&#121;&#46;&#99;&#111;&#109;"><span class="style32">winsfordasc@sky.com</span></a><span class="style32">.</span></p>
+			<p class="style39 f-lp"><span class="style32">To organise a trial with Winsford ASC contact Lorraine McGowan at </span><a href="mailto:&#97;&#115;&#115;&#101;&#115;&#115;&#109;&#101;&#110;&#116;&#115;&#119;&#97;&#115;&#99;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"><span class="style32">assessmentswasc@gmail.com</span></a></p>
+			</td>
+			<td height=19></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="coaches.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img2',1,'Resources/item2b4g.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b4h.gif" border=0 width=149 height=22 alt="item2b4" style="float:left" id="img2"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="fees.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img3',1,'Resources/item2b1a2.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b1a3.gif" border=0 width=149 height=22 alt="item2b1a" style="float:left" id="img3"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="nutritionadvise.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img4',1,'Resources/item2b2a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b2a2.gif" border=0 width=149 height=22 alt="item2b2a" style="float:left" id="img4"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=22><a href="contactus.html" onmouseover="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo');FWLSwap('img5',1,'Resources/item2b3a1.gif','','Indigo')" onmouseout="FWRestore(1,'Indigo');FWSRestore(top.frames,'Indigo')"><img src="Resources/item2b3a2.gif" border=0 width=149 height=22 alt="item2b3a" style="float:left" id="img5"></a></td>
+			<td height=22></td>
+		</tr>
+		<tr valign=top>
+			<td height=753 colspan=3></td>
+			<td height=753></td>
+		</tr>
+		<tr class="f-sp">
+			<td><img src="Resources/_clear.gif" border=0 width=22 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=149 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=9 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=800 height=1 alt="" style="float:left"></td>
+			<td><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+			<td height=1><img src="Resources/_clear.gif" border=0 width=1 height=1 alt="" style="float:left"></td>
+		</tr>
+	</table>
+</div>
+</body>
+
+<!-- Mirrored from www.winsfordasc.co.uk/information.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Sep 2015 05:43:00 GMT -->
+</html>
